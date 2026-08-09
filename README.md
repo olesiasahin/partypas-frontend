@@ -32,25 +32,47 @@ src/
 cloudflare/       Worker script + deploy instructions for geo-based language
 .github/workflows/deploy.yml   CI build & deploy to GitHub Pages
 public/CNAME      custom domain (partypas.com) for GitHub Pages
-public/favicon.svg, public/logo.svg   brand mark
+public/favicon.ico, public/logo-*.png   brand mark (see "Logo" below)
 ```
 
-## Brand colors
+## Design language
 
-Defined as CSS variables in `src/styles/theme.css`. The project brief named
-these six colors without exact hex codes, so the values below are a
-reasonable first pass — **swap them for your official swatches** whenever
-you have them; every component reads from these variables, so it's a
-one-file change.
+Editorial/luxury pass, styled after high-jewelry and fashion houses
+(Cartier, YSL, Moss). The site lives on a **Warm Greige** canvas with
+**Burgundy Noir** ink for all text — high-contrast and warm, not the
+flat-gold-on-light mistake. Burgundy Noir is kept as two deliberate dark
+"anchor" bands (the CTA band and the footer) for light/dark rhythm.
+**Gold is rendered as a metallic gradient** everywhere it appears as a
+fill — buttons, the CTA/email-card frame rules, the eyebrow underline —
+rather than a flat swatch, and is never used as small body text (fails
+legibility against the light canvas). Font throughout is **Bodoni Moda**
+(loaded from Google Fonts in `index.html`). Cherry Velvet remains
+retired from the palette.
 
-| Name           | Variable            | Current hex |
-|----------------|----------------------|-------------|
-| Vanilla Silk   | `--vanilla-silk`     | `#F7EFE4`   |
-| Alpine Oat     | `--alpine-oat`       | `#EAE0CE`   |
-| Warm Greige    | `--warm-greige`      | `#C8BBA9`   |
-| Cherry Velvet  | `--cherry-velvet`    | `#8A1F2E`   |
-| Bordeaux Noir  | `--bordeaux-noir`    | `#2B0A10`   |
-| Gold           | `--gold`             | `#C7A143`   |
+Defined as CSS variables in `src/styles/theme.css` — swap any of these
+for your official swatches whenever you have them; every component reads
+from these variables, so it's a one-file change.
+
+| Name                    | Variable                  | Current value            |
+|-------------------------|----------------------------|--------------------------|
+| Warm Greige (main canvas) | `--warm-greige`         | `#C8BBA9`                |
+| Burgundy Noir (main ink)  | `--burgundy-noir`       | `rgb(70, 20, 19)` — "noble burgundy" |
+| Burgundy Noir, raised (CTA band) | `--burgundy-noir-raised` | `#2e100f` |
+| Burgundy Noir, deep (footer) | `--burgundy-noir-deep` | `#200a09` |
+| Vanilla Silk            | `--vanilla-silk`          | `#F7EFE4`                |
+| Alpine Oat              | `--alpine-oat`            | `#EAE0CE`                |
+| Gold (flat, hairlines)  | `--gold`                  | `#C7A143`                |
+| Gold, metallic (fills, rules) | `--gold-metallic` / `--gold-metallic-h` | multi-stop gradient, see `theme.css` |
+
+## Logo
+
+`src/components/Logo.jsx` renders `public/logo-lockup.png` (icon +
+wordmark, transparent background) in the header/footer by default, or
+`public/logo-full.png` (adds the tagline) via `variant="full"`. The
+favicon (`public/favicon.ico` + PNG sizes + `apple-touch-icon.png`) uses
+the icon alone, no text, on a solid burgundy background for tab
+legibility. All are generated from the source artwork — regenerate them
+if the logo changes.
 
 ## Booking (Zoom)
 

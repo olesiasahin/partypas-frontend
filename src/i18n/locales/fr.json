@@ -13,7 +13,7 @@
   "home": {
     "hero": {
       "eyebrow": "École de danse PartyPas",
-      "title": "Trouvez votre rythme. Trouvez les vôtres.",
+      "title": "Bouge. Souris. Recommence.",
       "subtitle": "Du tout premier pas au premier tour, PartyPas accueille tous les corps et tous les rythmes — Danses de salon, Classique, Ballet et Latino, enseignés par des danseurs passionnés de transmission.",
       "ctaPrimary": "Réserver un cours",
       "ctaSecondary": "Découvrir les styles de danse"
@@ -30,9 +30,18 @@
     "why": {
       "title": "Pourquoi danser avec nous",
       "items": [
-        { "title": "Des cours en direct et personnalisés", "text": "Petits groupes et séances privées sur Zoom, pour que nos instructeurs puissent réellement observer et corriger vos mouvements." },
-        { "title": "Tous les niveaux sont les bienvenus", "text": "Grands débutants comme danseurs confirmés — nous adaptons chaque cours aux personnes présentes." },
-        { "title": "Des horaires flexibles", "text": "Choisissez une date et un horaire disponibles qui vous conviennent et réservez en quelques clics." }
+        {
+          "title": "Des cours en direct et personnalisés",
+          "text": "Petits groupes et séances privées sur Zoom, pour que nos instructeurs puissent réellement observer et corriger vos mouvements."
+        },
+        {
+          "title": "Tous les niveaux sont les bienvenus",
+          "text": "Grands débutants comme danseurs confirmés — nous adaptons chaque cours aux personnes présentes."
+        },
+        {
+          "title": "Des horaires flexibles",
+          "text": "Choisissez une date et un horaire disponibles qui vous conviennent et réservez en quelques clics."
+        }
       ]
     },
     "cta": {
@@ -74,10 +83,22 @@
     "steps": {
       "title": "Comment fonctionne la réservation",
       "items": [
-        { "title": "1. Choisissez votre style et votre créneau", "text": "Parcourez les dates et horaires disponibles et choisissez le créneau qui correspond à votre emploi du temps." },
-        { "title": "2. Confirmez votre réservation", "text": "Vous recevrez un lien Zoom et les détails du cours par e-mail dès que votre créneau sera confirmé." },
-        { "title": "3. Payez directement avec nous", "text": "Le paiement de votre cours est organisé manuellement avec notre équipe après la réservation — aucun paiement en ligne n'est requis pour le moment." },
-        { "title": "4. Présentez-vous et dansez", "text": "Rejoignez le lien Zoom à l'heure réservée et commencez à bouger." }
+        {
+          "title": "1. Choisissez votre style et votre créneau",
+          "text": "Parcourez les dates et horaires disponibles et choisissez le créneau qui correspond à votre emploi du temps."
+        },
+        {
+          "title": "2. Confirmez votre réservation",
+          "text": "Vous recevrez un lien Zoom et les détails du cours par e-mail dès que votre créneau sera confirmé."
+        },
+        {
+          "title": "3. Payez directement avec nous",
+          "text": "Le paiement de votre cours est organisé manuellement avec notre équipe après la réservation — aucun paiement en ligne n'est requis pour le moment."
+        },
+        {
+          "title": "4. Présentez-vous et dansez",
+          "text": "Rejoignez le lien Zoom à l'heure réservée et commencez à bouger."
+        }
       ]
     },
     "widgetTitle": "Dates et horaires disponibles",
@@ -102,16 +123,40 @@
     "readMore": "Lire la suite",
     "faqTitle": "Questions fréquentes",
     "posts": [
-      { "title": "5 conseils pour votre premier cours de danses de salon", "excerpt": "Nouveau dans les danses de salon ? Voici comment vous sentir en confiance, pas dépassé." },
-      { "title": "Pourquoi le Latino est un entraînement complet du corps", "excerpt": "La Salsa et la Bachata ne sont pas que ludiques — c'est aussi une vraie séance de cardio déguisée." },
-      { "title": "Les bases du ballet : ce que la 'première position' entraîne vraiment", "excerpt": "La première chose que chaque danseur apprend travaille bien plus que ce que l'on croit." }
+      {
+        "title": "5 conseils pour votre premier cours de danses de salon",
+        "excerpt": "Nouveau dans les danses de salon ? Voici comment vous sentir en confiance, pas dépassé."
+      },
+      {
+        "title": "Pourquoi le Latino est un entraînement complet du corps",
+        "excerpt": "La Salsa et la Bachata ne sont pas que ludiques — c'est aussi une vraie séance de cardio déguisée."
+      },
+      {
+        "title": "Les bases du ballet : ce que la 'première position' entraîne vraiment",
+        "excerpt": "La première chose que chaque danseur apprend travaille bien plus que ce que l'on croit."
+      }
     ],
     "faq": [
-      { "q": "Ai-je besoin d'un partenaire pour participer ?", "a": "Pas du tout. Beaucoup de nos cours sont conçus pour les danseurs seuls, et le travail en duo se pratique avec les instructeurs ou les autres élèves pendant le cours." },
-      { "q": "De quoi ai-je besoin pour un cours sur Zoom ?", "a": "Un ordinateur portable, une tablette ou un téléphone avec caméra, une connexion internet stable, et un peu d'espace au sol chez vous." },
-      { "q": "Comment puis-je payer un cours ?", "a": "Après avoir réservé un créneau, notre équipe vous contactera pour organiser le paiement manuellement — nous ne traitons pas encore les paiements sur le site." },
-      { "q": "Puis-je passer d'un style de danse à un autre ?", "a": "Bien sûr — de nombreux élèves explorent les danses de salon, le classique, le ballet et le latino ensemble pour développer des compétences complètes." },
-      { "q": "Que faire si je dois reprogrammer mon cours ?", "a": "Envoyez-nous simplement un e-mail à letsdance@partypas.com et nous vous aiderons à trouver un nouveau créneau." }
+      {
+        "q": "Ai-je besoin d'un partenaire pour participer ?",
+        "a": "Pas du tout. Beaucoup de nos cours sont conçus pour les danseurs seuls, et le travail en duo se pratique avec les instructeurs ou les autres élèves pendant le cours."
+      },
+      {
+        "q": "De quoi ai-je besoin pour un cours sur Zoom ?",
+        "a": "Un ordinateur portable, une tablette ou un téléphone avec caméra, une connexion internet stable, et un peu d'espace au sol chez vous."
+      },
+      {
+        "q": "Comment puis-je payer un cours ?",
+        "a": "Après avoir réservé un créneau, notre équipe vous contactera pour organiser le paiement manuellement — nous ne traitons pas encore les paiements sur le site."
+      },
+      {
+        "q": "Puis-je passer d'un style de danse à un autre ?",
+        "a": "Bien sûr — de nombreux élèves explorent les danses de salon, le classique, le ballet et le latino ensemble pour développer des compétences complètes."
+      },
+      {
+        "q": "Que faire si je dois reprogrammer mon cours ?",
+        "a": "Envoyez-nous simplement un e-mail à letsdance@partypas.com et nous vous aiderons à trouver un nouveau créneau."
+      }
     ]
   },
   "footer": {

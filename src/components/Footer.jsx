@@ -22,7 +22,7 @@ export default function Footer() {
         </nav>
 
         <div className="footer-contact">
-          <a href="mailto:letsdance@partypas.com">letsdance@partypas.com</a>
+          <a href="mailto:letsdance@partypas.com" className="metallic-text">letsdance@partypas.com</a>
         </div>
       </div>
       <div className="container">

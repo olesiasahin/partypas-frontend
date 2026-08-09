@@ -18,7 +18,6 @@ export default function Home() {
             <Link to="/book" className="btn btn-primary">{t("home.hero.ctaPrimary")}</Link>
             <Link to="/dance-styles" className="btn btn-outline">{t("home.hero.ctaSecondary")}</Link>
           </div>
-          <p className="hero-tagline">{t("home.tagline")}</p>
         </div>
       </section>
 

@@ -13,7 +13,7 @@
   "home": {
     "hero": {
       "eyebrow": "PartyPas Dans Okulu",
-      "title": "Ritmini bul. İnsanlarını bul.",
+      "title": "Hareket Et. Gülümse. Tekrar Et.",
       "subtitle": "İlk adımından ilk dönüşüne kadar PartyPas her bedeni ve her ritmi karşılar — Salon Dansları, Klasik, Bale ve Latin, öğretmeyi seven dansçılar tarafından öğretilir.",
       "ctaPrimary": "Ders ayırt",
       "ctaSecondary": "Dans stillerini keşfet"
@@ -30,9 +30,18 @@
     "why": {
       "title": "Neden bizimle dans etmelisiniz",
       "items": [
-        { "title": "Canlı, kişisel dersler", "text": "Zoom üzerinden küçük gruplar ve özel dersler, böylece eğitmenler hareketinizi gerçekten görüp düzeltebilir." },
-        { "title": "Her seviyeye açık kapı", "text": "Tam anlamıyla yeni başlayanlar da geri dönen dansçılar da — her dersi katılanlara göre şekillendiriyoruz." },
-        { "title": "Esnek programlama", "text": "Size uygun bir tarih ve saat seçin, birkaç tıkla rezervasyonunuzu yapın." }
+        {
+          "title": "Canlı, kişisel dersler",
+          "text": "Zoom üzerinden küçük gruplar ve özel dersler, böylece eğitmenler hareketinizi gerçekten görüp düzeltebilir."
+        },
+        {
+          "title": "Her seviyeye açık kapı",
+          "text": "Tam anlamıyla yeni başlayanlar da geri dönen dansçılar da — her dersi katılanlara göre şekillendiriyoruz."
+        },
+        {
+          "title": "Esnek programlama",
+          "text": "Size uygun bir tarih ve saat seçin, birkaç tıkla rezervasyonunuzu yapın."
+        }
       ]
     },
     "cta": {
@@ -74,10 +83,22 @@
     "steps": {
       "title": "Rezervasyon nasıl işliyor",
       "items": [
-        { "title": "1. Stilinizi ve saatinizi seçin", "text": "Uygun tarih ve saatlere göz atın, programınıza uyan zaman dilimini seçin." },
-        { "title": "2. Rezervasyonunuzu onaylayın", "text": "Randevunuz onaylandığında Zoom bağlantısını ve ders detaylarını e-posta ile alacaksınız." },
-        { "title": "3. Ödemeyi doğrudan bizimle yapın", "text": "Dersinizin ödemesi, rezervasyondan sonra ekibimizle manuel olarak ayarlanır — şimdilik çevrimiçi ödeme gerekmiyor." },
-        { "title": "4. Gelin ve dans edin", "text": "Ayırttığınız saatte Zoom bağlantısına katılın ve hareket etmeye başlayın." }
+        {
+          "title": "1. Stilinizi ve saatinizi seçin",
+          "text": "Uygun tarih ve saatlere göz atın, programınıza uyan zaman dilimini seçin."
+        },
+        {
+          "title": "2. Rezervasyonunuzu onaylayın",
+          "text": "Randevunuz onaylandığında Zoom bağlantısını ve ders detaylarını e-posta ile alacaksınız."
+        },
+        {
+          "title": "3. Ödemeyi doğrudan bizimle yapın",
+          "text": "Dersinizin ödemesi, rezervasyondan sonra ekibimizle manuel olarak ayarlanır — şimdilik çevrimiçi ödeme gerekmiyor."
+        },
+        {
+          "title": "4. Gelin ve dans edin",
+          "text": "Ayırttığınız saatte Zoom bağlantısına katılın ve hareket etmeye başlayın."
+        }
       ]
     },
     "widgetTitle": "Uygun tarihler ve saatler",
@@ -102,16 +123,40 @@
     "readMore": "Devamını oku",
     "faqTitle": "Sıkça sorulan sorular",
     "posts": [
-      { "title": "İlk Salon Dansı dersiniz için 5 ipucu", "excerpt": "Salon danslarına yeni mi başlıyorsunuz? İşte bunalmadan, kendinden emin bir şekilde derse başlamanın yolu." },
-      { "title": "Latin dans neden tüm vücudu çalıştıran bir antrenmandır", "excerpt": "Salsa ve Bachata sadece eğlenceli değil — aslında ciddi bir kardiyo antrenmanı." },
-      { "title": "Bale temelleri: 'birinci pozisyon' gerçekte neyi çalıştırır", "excerpt": "Her dansçının öğrendiği ilk şey, düşündüğünüzden çok daha fazlasını içerir." }
+      {
+        "title": "İlk Salon Dansı dersiniz için 5 ipucu",
+        "excerpt": "Salon danslarına yeni mi başlıyorsunuz? İşte bunalmadan, kendinden emin bir şekilde derse başlamanın yolu."
+      },
+      {
+        "title": "Latin dans neden tüm vücudu çalıştıran bir antrenmandır",
+        "excerpt": "Salsa ve Bachata sadece eğlenceli değil — aslında ciddi bir kardiyo antrenmanı."
+      },
+      {
+        "title": "Bale temelleri: 'birinci pozisyon' gerçekte neyi çalıştırır",
+        "excerpt": "Her dansçının öğrendiği ilk şey, düşündüğünüzden çok daha fazlasını içerir."
+      }
     ],
     "faq": [
-      { "q": "Katılmak için partnere ihtiyacım var mı?", "a": "Hiç de değil. Derslerimizin çoğu tek başına öğrenenler için tasarlanmıştır ve partner çalışmaları ders sırasında eğitmenler veya diğer öğrencilerle pratik edilir." },
-      { "q": "Zoom dersi için neye ihtiyacım var?", "a": "Kameralı bir dizüstü bilgisayar, tablet veya telefon, stabil bir internet bağlantısı ve evde biraz açık zemin alanı." },
-      { "q": "Bir ders için ödemeyi nasıl yapıyorum?", "a": "Bir zaman dilimi ayırttıktan sonra ekibimiz ödemeyi manuel olarak ayarlamak için sizinle iletişime geçecek — şu an için web sitesinde ödeme işlemi yapmıyoruz." },
-      { "q": "Dans stilleri arasında geçiş yapabilir miyim?", "a": "Kesinlikle — birçok öğrencimiz iyi yuvarlaklaşmış bir beceri seti oluşturmak için Salon Dansları, Klasik, Bale ve Latin dansları bir arada keşfediyor." },
-      { "q": "Ya randevumu değiştirmem gerekirse?", "a": "letsdance@partypas.com adresinden bize e-posta gönderin, size yeni bir zaman dilimi bulmamıza yardımcı olalım." }
+      {
+        "q": "Katılmak için partnere ihtiyacım var mı?",
+        "a": "Hiç de değil. Derslerimizin çoğu tek başına öğrenenler için tasarlanmıştır ve partner çalışmaları ders sırasında eğitmenler veya diğer öğrencilerle pratik edilir."
+      },
+      {
+        "q": "Zoom dersi için neye ihtiyacım var?",
+        "a": "Kameralı bir dizüstü bilgisayar, tablet veya telefon, stabil bir internet bağlantısı ve evde biraz açık zemin alanı."
+      },
+      {
+        "q": "Bir ders için ödemeyi nasıl yapıyorum?",
+        "a": "Bir zaman dilimi ayırttıktan sonra ekibimiz ödemeyi manuel olarak ayarlamak için sizinle iletişime geçecek — şu an için web sitesinde ödeme işlemi yapmıyoruz."
+      },
+      {
+        "q": "Dans stilleri arasında geçiş yapabilir miyim?",
+        "a": "Kesinlikle — birçok öğrencimiz iyi yuvarlaklaşmış bir beceri seti oluşturmak için Salon Dansları, Klasik, Bale ve Latin dansları bir arada keşfediyor."
+      },
+      {
+        "q": "Ya randevumu değiştirmem gerekirse?",
+        "a": "letsdance@partypas.com adresinden bize e-posta gönderin, size yeni bir zaman dilimi bulmamıza yardımcı olalım."
+      }
     ]
   },
   "footer": {

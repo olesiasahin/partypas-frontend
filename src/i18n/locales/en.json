@@ -13,7 +13,7 @@
   "home": {
     "hero": {
       "eyebrow": "PartyPas Dance School",
-      "title": "Find your rhythm. Find your people.",
+      "title": "Move. Smile. Repeat.",
       "subtitle": "From your first step to your first spin, PartyPas welcomes every body and every beat — Ballroom, Classic, Ballet and Latino, taught by dancers who love to teach.",
       "ctaPrimary": "Book a class",
       "ctaSecondary": "Explore dance styles"
@@ -30,9 +30,18 @@
     "why": {
       "title": "Why dance with us",
       "items": [
-        { "title": "Live, personal classes", "text": "Small groups and private sessions over Zoom, so instructors can actually watch and correct your movement." },
-        { "title": "Every level welcome", "text": "Complete beginners and returning dancers alike — we shape each class around who shows up." },
-        { "title": "Flexible scheduling", "text": "Pick an open date and hour that works for you and book it in a couple of clicks." }
+        {
+          "title": "Live, personal classes",
+          "text": "Small groups and private sessions over Zoom, so instructors can actually watch and correct your movement."
+        },
+        {
+          "title": "Every level welcome",
+          "text": "Complete beginners and returning dancers alike — we shape each class around who shows up."
+        },
+        {
+          "title": "Flexible scheduling",
+          "text": "Pick an open date and hour that works for you and book it in a couple of clicks."
+        }
       ]
     },
     "cta": {
@@ -74,10 +83,22 @@
     "steps": {
       "title": "How booking works",
       "items": [
-        { "title": "1. Choose your style & time", "text": "Browse open dates and hours and pick the slot that fits your schedule." },
-        { "title": "2. Confirm your booking", "text": "You'll receive a Zoom link and class details by email once your slot is confirmed." },
-        { "title": "3. Pay directly with us", "text": "Payment for your class is arranged manually with our team after booking — no online payment needed yet." },
-        { "title": "4. Show up & dance", "text": "Join the Zoom link at your booked time and start moving." }
+        {
+          "title": "1. Choose your style & time",
+          "text": "Browse open dates and hours and pick the slot that fits your schedule."
+        },
+        {
+          "title": "2. Confirm your booking",
+          "text": "You'll receive a Zoom link and class details by email once your slot is confirmed."
+        },
+        {
+          "title": "3. Pay directly with us",
+          "text": "Payment for your class is arranged manually with our team after booking — no online payment needed yet."
+        },
+        {
+          "title": "4. Show up & dance",
+          "text": "Join the Zoom link at your booked time and start moving."
+        }
       ]
     },
     "widgetTitle": "Available dates & hours",
@@ -102,16 +123,40 @@
     "readMore": "Read more",
     "faqTitle": "Frequently asked questions",
     "posts": [
-      { "title": "5 tips for your first Ballroom lesson", "excerpt": "New to Ballroom? Here's how to walk in feeling confident, not overwhelmed." },
-      { "title": "Why Latino dance is a full-body workout", "excerpt": "Salsa and Bachata aren't just fun — they're a serious cardio session in disguise." },
-      { "title": "Ballet basics: what 'first position' really trains", "excerpt": "The first thing every dancer learns is doing more than you think." }
+      {
+        "title": "5 tips for your first Ballroom lesson",
+        "excerpt": "New to Ballroom? Here's how to walk in feeling confident, not overwhelmed."
+      },
+      {
+        "title": "Why Latino dance is a full-body workout",
+        "excerpt": "Salsa and Bachata aren't just fun — they're a serious cardio session in disguise."
+      },
+      {
+        "title": "Ballet basics: what 'first position' really trains",
+        "excerpt": "The first thing every dancer learns is doing more than you think."
+      }
     ],
     "faq": [
-      { "q": "Do I need a partner to join?", "a": "Not at all. Many of our classes are designed for solo learners, and partner work is practiced with instructors or fellow students during class." },
-      { "q": "What do I need for a Zoom class?", "a": "A laptop, tablet or phone with a camera, a stable internet connection, and a bit of open floor space at home." },
-      { "q": "How do I pay for a class?", "a": "After you book a slot, our team will reach out to arrange payment manually — we don't process payments on the website yet." },
-      { "q": "Can I switch between dance styles?", "a": "Absolutely — many students explore Ballroom, Classic, Ballet and Latino together to build a well-rounded skill set." },
-      { "q": "What if I need to reschedule?", "a": "Just email us at letsdance@partypas.com and we'll help you find a new slot." }
+      {
+        "q": "Do I need a partner to join?",
+        "a": "Not at all. Many of our classes are designed for solo learners, and partner work is practiced with instructors or fellow students during class."
+      },
+      {
+        "q": "What do I need for a Zoom class?",
+        "a": "A laptop, tablet or phone with a camera, a stable internet connection, and a bit of open floor space at home."
+      },
+      {
+        "q": "How do I pay for a class?",
+        "a": "After you book a slot, our team will reach out to arrange payment manually — we don't process payments on the website yet."
+      },
+      {
+        "q": "Can I switch between dance styles?",
+        "a": "Absolutely — many students explore Ballroom, Classic, Ballet and Latino together to build a well-rounded skill set."
+      },
+      {
+        "q": "What if I need to reschedule?",
+        "a": "Just email us at letsdance@partypas.com and we'll help you find a new slot."
+      }
     ]
   },
   "footer": {
