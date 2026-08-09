@@ -1,0 +1,10 @@
+name = "partypas-geo-lang"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# After `wrangler deploy`, attach this worker to a route in the
+# Cloudflare dashboard (Workers & Pages > partypas-geo-lang > Triggers):
+#   partypas.com/*
+#   www.partypas.com/*
+# Make sure partypas.com's DNS record is proxied (orange cloud) in
+# Cloudflare so the worker sits in front of GitHub Pages.
