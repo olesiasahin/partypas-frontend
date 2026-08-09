@@ -20,7 +20,7 @@ export default function Header() {
     <header className="site-header">
       <div className="container site-header-inner">
         <NavLink to="/" className="brand-link" onClick={() => setOpen(false)}>
-          <Logo size={38} />
+          <Logo size={60} />
         </NavLink>
 
         <nav className={`main-nav ${open ? "open" : ""}`}>

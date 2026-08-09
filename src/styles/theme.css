@@ -140,9 +140,9 @@ a {
   color: var(--burgundy-noir);
 }
 .btn:hover {
-  background: var(--gold);
+  background: #2e100f;
   border-color: transparent;
-  color: var(--burgundy-noir);
+  color: var(--vanilla-silk);
 }
 
 .btn-primary,
@@ -153,7 +153,8 @@ a {
 }
 .btn-primary:hover,
 .btn-gold:hover {
-  background: var(--burgundy-noir);
+  background: #2e100f;
+  border-color: transparent;
   color: var(--vanilla-silk);
   transform: translateY(-1px);
 }
@@ -164,9 +165,9 @@ a {
   color: var(--burgundy-noir);
 }
 .btn-outline:hover {
-  background: var(--gold);
+  background: #2e100f;
   border-color: transparent;
-  color: var(--burgundy-noir);
+  color: var(--vanilla-silk);
 }
 
 /* Panels — a thin ink hairline on the warm canvas, lifted with a touch of
@@ -217,7 +218,6 @@ a {
   height: 2px;
   background: var(--gold-metallic);
 }
-.section-dark .eyebrow,
-.cta-band .eyebrow {
+.section-dark .eyebrow {
   color: var(--color-text-on-dark);
 }

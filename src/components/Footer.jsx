@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container footer-inner">
         <div className="footer-brand">
-          <Logo size={32} />
+          <Logo size={42} />
           <p className="footer-tagline">{t("footer.tagline")}</p>
         </div>
 

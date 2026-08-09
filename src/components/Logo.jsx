@@ -1,18 +1,20 @@
 /**
- * PartyPas brand mark. `logo-lockup.png` (icon + wordmark, transparent
- * background) is the everyday header/footer version; pass
- * variant="full" to use `logo-full.png`, which also includes the
- * "Move. Smile. Repeat." tagline — nice for a larger footer or a
- * standalone brand moment. The favicon uses the icon alone (see
- * index.html / public/favicon.ico) with no wordmark, per spec.
+ * PartyPas brand mark. `logo-circle.png` is the icon alone — the dancer
+ * artwork encapsulated in a circular badge, background kept intact, no
+ * text baked in — used everywhere (header, footer, favicon) so the mark
+ * is never square. The "PartyPas" wordmark next to it is real text, not
+ * part of the image, so it stays crisp at any size and doesn't need to
+ * be regenerated if copy or language changes.
  */
-export default function Logo({ size = 44, variant = "lockup" }) {
-  const src = variant === "full" ? "/logo-full.png" : "/logo-lockup.png";
+export default function Logo({ size = 44, withWordmark = true }) {
   return (
-    <img
-      src={src}
-      alt="PartyPas — Move. Smile. Repeat."
-      style={{ height: size, width: "auto", display: "block" }}
-    />
+    <span style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
+      <img
+        src="/logo-circle.png"
+        alt="PartyPas"
+        style={{ height: size, width: size, borderRadius: "50%", display: "block" }}
+      />
+      {withWordmark && <span className="logo-word">PartyPas</span>}
+    </span>
   );
 }

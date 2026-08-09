@@ -27,14 +27,16 @@ main {
   flex: 1;
 }
 
-/* Header */
+/* Header — deliberate dark anchor band (#2e100f) so the mark and nav
+   stand out immediately; all header text uses light/gold brand tones for
+   contrast against that dark fill, never the burgundy-on-greige ink pair
+   used on the page body. */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(247, 239, 228, 0.88);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--color-border-soft);
+  background: #2e100f;
+  border-bottom: 1px solid rgba(199, 161, 67, 0.28);
 }
 
 .site-header-inner {
@@ -42,13 +44,23 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 14px 24px;
+  padding: 16px 24px;
 }
 
 .brand-link {
   text-decoration: none;
-  color: var(--color-text);
+  color: var(--vanilla-silk);
   display: inline-flex;
+  align-items: center;
+}
+
+.logo-word {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.55rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--vanilla-silk);
 }
 
 .main-nav {
@@ -58,19 +70,19 @@ main {
 
 .nav-link {
   text-decoration: none;
-  font-weight: 500;
-  font-size: 0.76rem;
+  font-weight: 700;
+  font-size: 0.92rem;
   text-transform: uppercase;
   letter-spacing: var(--tracking-nav);
-  color: var(--color-text-muted);
+  color: rgba(247, 239, 228, 0.78);
   padding: 6px 0;
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--burgundy-noir);
+  color: var(--gold);
   border-color: var(--gold);
 }
 
@@ -80,22 +92,68 @@ main {
   gap: 20px;
 }
 
-.lang-switcher {
-  border: none;
-  border-bottom: 1px solid var(--gold);
+/* Language switcher — a single-row chip group (TR / EN / UA / RU / FR) on
+   screens wide enough for the full nav, so every language is one click
+   away and the active one is always visible; kept to short codes only, on
+   one line, never wrapping. Below the mobile-nav breakpoint the chips
+   would crowd the hamburger button, so a compact native <select> (still
+   short codes, not full language names) takes over instead — the
+   .lang-switcher-wrap media query below is what flips between the two. */
+.lang-switcher-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.lang-chips {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: nowrap;
+}
+
+.lang-chip {
+  border: 1px solid rgba(247, 239, 228, 0.35);
   background: transparent;
-  color: var(--burgundy-noir);
-  border-radius: 0;
-  padding: 4px 18px 4px 2px;
-  font-size: 0.72rem;
-  font-weight: 500;
+  color: var(--vanilla-silk);
+  border-radius: 20px;
+  padding: 5px 9px;
+  font-family: var(--font-body);
+  font-size: 0.64rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: var(--tracking-nav);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.lang-chip:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.lang-chip.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--alpine-oat);
+}
+
+.lang-select {
+  display: none;
+  border: 1px solid rgba(247, 239, 228, 0.35);
+  background: #2e100f;
+  color: var(--vanilla-silk);
+  border-radius: 20px;
+  padding: 6px 10px;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   cursor: pointer;
 }
-.lang-switcher option {
-  background: var(--vanilla-silk);
-  color: var(--burgundy-noir);
+.lang-select option {
+  background: #2e100f;
+  color: var(--vanilla-silk);
 }
 
 .nav-toggle {
@@ -109,21 +167,21 @@ main {
 }
 .nav-toggle span {
   width: 22px;
-  height: 1px;
-  background: var(--color-text);
+  height: 2px;
+  background: var(--vanilla-silk);
   display: block;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1023px) {
   .main-nav {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     flex-direction: column;
-    background: var(--vanilla-silk);
-    border-bottom: 1px solid var(--color-border-soft);
-    border-top: 1px solid var(--color-border-soft);
+    background: #2e100f;
+    border-bottom: 1px solid rgba(199, 161, 67, 0.28);
+    border-top: 1px solid rgba(199, 161, 67, 0.28);
     padding: 20px 24px;
     display: none;
     gap: 18px;
@@ -133,6 +191,14 @@ main {
   }
   .nav-toggle {
     display: flex;
+  }
+  /* Five chips crowd the header once the hamburger appears — swap to the
+     compact dropdown, codes only, no full language names. */
+  .lang-chips {
+    display: none;
+  }
+  .lang-select {
+    display: inline-block;
   }
 }
 
@@ -253,10 +319,12 @@ main {
   font-size: 0.95rem;
 }
 
-/* CTA band — the dark anchor moment, framed with a metallic gold rule */
+/* CTA band — warm-greige anchor (#c8bba9), framed with a metallic gold
+   rule; text drops to the burgundy ink pair used on the light canvas
+   since the band is no longer dark. */
 .cta-band {
-  background: var(--color-bg-dark);
-  color: var(--color-text-on-dark);
+  background: #c8bba9;
+  color: var(--burgundy-noir);
   text-align: center;
 }
 .cta-band .container {
@@ -266,17 +334,17 @@ main {
   padding: 72px 24px;
 }
 .cta-band h2 {
-  color: var(--color-text-on-dark);
+  color: var(--burgundy-noir);
 }
 .cta-band .eyebrow {
-  color: var(--color-text-on-dark);
+  color: var(--burgundy-noir);
 }
 .cta-band-inner {
   max-width: 560px;
   margin: 0 auto;
 }
 .cta-band p {
-  color: var(--color-text-on-dark-muted);
+  color: var(--color-text-muted);
   margin-bottom: 32px;
 }
 
@@ -521,6 +589,13 @@ main {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+.footer-brand .logo-word {
+  color: var(--color-text-on-dark);
+  /* Base .logo-word is sized for the 60px header mark — scale the
+     wordmark down to match the footer's smaller 42px icon so the two
+     stay in the same proportion instead of a big word next to a tiny mark. */
+  font-size: 1.05rem;
 }
 .footer-tagline {
   font-style: italic;

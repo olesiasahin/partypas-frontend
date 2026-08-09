@@ -9,11 +9,11 @@ import ru from "./locales/ru.json";
 import fr from "./locales/fr.json";
 
 export const SUPPORTED_LANGUAGES = [
-  { code: "tr", label: "Türkçe" },
-  { code: "en", label: "English" },
-  { code: "uk", label: "Українська" },
-  { code: "ru", label: "Русский" },
-  { code: "fr", label: "Français" },
+  { code: "tr", label: "Türkçe", chip: "TR" },
+  { code: "en", label: "English", chip: "EN" },
+  { code: "uk", label: "Українська", chip: "UA" },
+  { code: "ru", label: "Русский", chip: "RU" },
+  { code: "fr", label: "Français", chip: "FR" },
 ];
 
 const resources = {
