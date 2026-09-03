@@ -5,77 +5,90 @@
   },
   "nav": {
     "home": "Home",
-    "danceTypes": "Dance Styles",
-    "appointment": "Book a Class",
+    "classes": "Classes",
+    "programs": "Programs",
+    "about": "About",
     "blog": "Blog & FAQ",
-    "contact": "Contact"
+    "contact": "Contact",
+    "cta": "Start your classes"
   },
-  "home": {
-    "hero": {
-      "eyebrow": "PartyPas Dance School",
-      "title": "Move. Smile. Repeat.",
-      "subtitle": "From your first step to your first spin, PartyPas welcomes every body and every beat — Ballroom, Classic, Ballet and Latino, taught by dancers who love to teach.",
-      "ctaPrimary": "Book a class",
-      "ctaSecondary": "Explore dance styles"
+  "hero": {
+    "title": "A STEP\nTOWARD\nYOURSELF.",
+    "subtitle": "Dance is time\nyou choose\nto give yourself.",
+    "cta": "Start your classes"
+  },
+  "disciplines": {
+    "classical": {
+      "name": "Classical",
+      "lines": ["Posture", "Elegance", "Strength"],
+      "more": "Learn more"
     },
-    "tagline": "Move. Smile. Repeat.",
-    "intro": {
-      "title": "A studio built around joy",
-      "text": "PartyPas is an online-first dance school: browse our styles, pick a date and hour that suits you, and hop on a live Zoom class with our instructors. No pressure, no judgment — just movement."
+    "ballroom": {
+      "name": "Ballroom Dance",
+      "lines": ["Rhythm", "Confidence", "Femininity"],
+      "more": "Learn more"
     },
-    "styles": {
-      "title": "Our dance styles",
-      "cta": "See all styles"
-    },
-    "why": {
-      "title": "Why dance with us",
-      "items": [
-        {
-          "title": "Live, personal classes",
-          "text": "Small groups and private sessions over Zoom, so instructors can actually watch and correct your movement."
-        },
-        {
-          "title": "Every level welcome",
-          "text": "Complete beginners and returning dancers alike — we shape each class around who shows up."
-        },
-        {
-          "title": "Flexible scheduling",
-          "text": "Pick an open date and hour that works for you and book it in a couple of clicks."
-        }
-      ]
-    },
-    "cta": {
-      "title": "Ready to move?",
-      "text": "Check available dates and reserve your spot — payment is arranged directly with us after booking.",
-      "button": "Book your class"
+    "stretching": {
+      "name": "Stretching",
+      "lines": ["Flexibility", "Ease", "Body awareness"],
+      "more": "Learn more"
     }
   },
-  "danceTypes": {
-    "eyebrow": "Dance Styles",
-    "title": "Four styles, one dance floor",
-    "intro": "Whether you're drawn to the elegance of Ballroom, the precision of Classic, the grace of Ballet, or the fire of Latino, there's a class — and an instructor — waiting for you.",
-    "ballroom": {
-      "name": "Ballroom",
-      "short": "Elegant partner dancing — Waltz, Tango, Foxtrot and more.",
-      "desc": "Ballroom dancing is about connection: frame, lead-and-follow, and the quiet conversation between two dancers. Our classes cover Waltz, Tango, Foxtrot and Viennese Waltz, building posture, timing and partnership from your very first lesson."
-    },
-    "classic": {
-      "name": "Classic",
-      "short": "Timeless technique and refined musicality.",
-      "desc": "Our Classic program focuses on foundational technique — alignment, musicality and clean lines — drawing on classical dance training. It's the perfect base for dancers who want strong fundamentals, whatever style they move on to next."
-    },
-    "ballet": {
-      "name": "Ballet",
-      "short": "Strength, grace and discipline at the barre.",
-      "desc": "From first positions at the barre to center work and simple choreography, our Ballet classes build strength, flexibility and grace at any age or level, in a warm and encouraging setting."
-    },
-    "latino": {
-      "name": "Latino",
-      "short": "Salsa, Bachata, Cha-Cha and pure energy.",
-      "desc": "Latino classes bring the heat: hip movement, rhythm and playful partner work across Salsa, Bachata, Cha-Cha and Rumba. Come ready to sweat, laugh and let go."
-    },
-    "cta": "Book this style"
+  "how": {
+    "eyebrow": "How it works",
+    "title": "Live online.\nSmall groups\nthat feel personal.",
+    "more": "Discover details",
+    "steps": ["Choose a class", "Choose your time", "Get your link", "Join from home"]
   },
+  "teacher": {
+    "eyebrow": "Your teacher",
+    "title": "Dance is\na way of life\nfor me.",
+    "text": "I bring years of stage, studio and teaching experience to help women build confidence, technique and expressive movement.",
+    "more": "More"
+  },
+  "footerCta": {
+    "title": "Start your classes.",
+    "text": "Fill out the form and we’ll choose your first step together.",
+    "button": "Start your classes"
+  },
+  "pages": {
+    "classical": {
+      "title": "Classical",
+      "lead": "Live online classical training for posture, technique, elegance and strength.",
+      "body": "Every text, image and button on this page is designed to be independently editable later."
+    },
+    "ballroom": {
+      "title": "Ballroom Dance",
+      "lead": "Rhythm, coordination, confidence and expression.",
+      "body": "Partner-free online ballroom classes, from foundations to fluid movement."
+    },
+    "stretching": {
+      "title": "Stretching",
+      "lead": "Flexibility, ease and body awareness.",
+      "body": "Live online stretching focused on controlled mobility and freer movement."
+    },
+    "whyOnline": {
+      "title": "Why Online?",
+      "lead": "Dance fits your life.",
+      "body": "No commute. Join from home or while travelling. In small live groups the teacher sees you, guides you and corrects your technique."
+    },
+    "about": {
+      "title": "About",
+      "lead": "PartyPas makes dance an elegant, accessible part of everyday life.",
+      "body": "Brand story, teacher bio and photos will all be editable."
+    },
+    "programs": {
+      "title": "Programs",
+      "lead": "Choose a program that suits your goals.",
+      "body": "Package names and prices live only on this page, not on the homepage."
+    }
+  },
+  "programList": [
+    { "name": "Classical + Stretching", "details": "8 classes / month", "price": "8,000 TL" },
+    { "name": "Ballroom + Stretching", "details": "8 classes / month", "price": "8,000 TL" },
+    { "name": "The Full Experience", "details": "Classical + Ballroom + Stretching", "price": "10,000 TL / month" },
+    { "name": "Private Class", "details": "1 private class", "price": "2,500 TL" }
+  ],
   "appointment": {
     "eyebrow": "Book a Class",
     "title": "Pick a date, pick an hour, hit the floor",
@@ -128,11 +141,11 @@
         "excerpt": "New to Ballroom? Here's how to walk in feeling confident, not overwhelmed."
       },
       {
-        "title": "Why Latino dance is a full-body workout",
-        "excerpt": "Salsa and Bachata aren't just fun — they're a serious cardio session in disguise."
+        "title": "Why Stretching belongs in every dancer's week",
+        "excerpt": "Flexibility and body awareness aren't extras — they're what make every style feel easier."
       },
       {
-        "title": "Ballet basics: what 'first position' really trains",
+        "title": "Classical basics: what strong posture really trains",
         "excerpt": "The first thing every dancer learns is doing more than you think."
       }
     ],
@@ -150,8 +163,8 @@
         "a": "After you book a slot, our team will reach out to arrange payment manually — we don't process payments on the website yet."
       },
       {
-        "q": "Can I switch between dance styles?",
-        "a": "Absolutely — many students explore Ballroom, Classic, Ballet and Latino together to build a well-rounded skill set."
+        "q": "Can I switch between classes?",
+        "a": "Absolutely — many students combine Classical, Ballroom and Stretching to build a well-rounded practice."
       },
       {
         "q": "What if I need to reschedule?",

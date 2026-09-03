@@ -5,77 +5,90 @@
   },
   "nav": {
     "home": "Accueil",
-    "danceTypes": "Styles de danse",
-    "appointment": "Réserver un cours",
+    "classes": "Cours",
+    "programs": "Programmes",
+    "about": "À propos",
     "blog": "Blog & FAQ",
-    "contact": "Contact"
+    "contact": "Contact",
+    "cta": "Commencer les cours"
   },
-  "home": {
-    "hero": {
-      "eyebrow": "École de danse PartyPas",
-      "title": "Bouge. Souris. Recommence.",
-      "subtitle": "Du tout premier pas au premier tour, PartyPas accueille tous les corps et tous les rythmes — Danses de salon, Classique, Ballet et Latino, enseignés par des danseurs passionnés de transmission.",
-      "ctaPrimary": "Réserver un cours",
-      "ctaSecondary": "Découvrir les styles de danse"
-    },
-    "tagline": "Bouge. Souris. Recommence.",
-    "intro": {
-      "title": "Un studio pensé pour la joie",
-      "text": "PartyPas est une école de danse pensée pour le web : parcourez nos styles, choisissez une date et un horaire qui vous conviennent, et rejoignez un cours en direct sur Zoom avec nos instructeurs. Sans pression, sans jugement — juste du mouvement."
-    },
-    "styles": {
-      "title": "Nos styles de danse",
-      "cta": "Voir tous les styles"
-    },
-    "why": {
-      "title": "Pourquoi danser avec nous",
-      "items": [
-        {
-          "title": "Des cours en direct et personnalisés",
-          "text": "Petits groupes et séances privées sur Zoom, pour que nos instructeurs puissent réellement observer et corriger vos mouvements."
-        },
-        {
-          "title": "Tous les niveaux sont les bienvenus",
-          "text": "Grands débutants comme danseurs confirmés — nous adaptons chaque cours aux personnes présentes."
-        },
-        {
-          "title": "Des horaires flexibles",
-          "text": "Choisissez une date et un horaire disponibles qui vous conviennent et réservez en quelques clics."
-        }
-      ]
-    },
-    "cta": {
-      "title": "Prêt à bouger ?",
-      "text": "Consultez les dates disponibles et réservez votre place — le paiement est réglé directement avec nous après la réservation.",
-      "button": "Réservez votre cours"
-    }
+  "hero": {
+    "title": "UN PAS\nVERS\nSOI.",
+    "subtitle": "Danser, c’est du temps\nque vous choisissez\nde vous offrir.",
+    "cta": "Commencer les cours"
   },
-  "danceTypes": {
-    "eyebrow": "Styles de danse",
-    "title": "Quatre styles, une seule piste de danse",
-    "intro": "Que vous soyez attiré par l'élégance des danses de salon, la précision du classique, la grâce du ballet ou le feu du latino, un cours — et un instructeur — vous attend.",
+  "disciplines": {
+    "classical": {
+      "name": "Classique",
+      "lines": ["Posture", "Élégance", "Force"],
+      "more": "En savoir plus"
+    },
     "ballroom": {
       "name": "Danses de salon",
-      "short": "Danse à deux élégante — Valse, Tango, Foxtrot et plus encore.",
-      "desc": "Les danses de salon, c'est avant tout une connexion : le maintien, le guidage et la conversation silencieuse entre deux danseurs. Nos cours couvrent la Valse, le Tango, le Foxtrot et la Valse viennoise, en travaillant la posture, le rythme et le partenariat dès la toute première leçon."
+      "lines": ["Rythme", "Confiance", "Féminité"],
+      "more": "En savoir plus"
     },
-    "classic": {
-      "name": "Classique",
-      "short": "Une technique intemporelle et une musicalité raffinée.",
-      "desc": "Notre programme Classique se concentre sur les fondamentaux techniques — alignement, musicalité et lignes épurées — en s'appuyant sur la formation de danse classique. C'est la base idéale pour les danseurs qui souhaitent des fondations solides, quel que soit le style vers lequel ils évolueront ensuite."
-    },
-    "ballet": {
-      "name": "Ballet",
-      "short": "Force, grâce et discipline à la barre.",
-      "desc": "Des premières positions à la barre au travail au milieu et aux chorégraphies simples, nos cours de Ballet développent force, souplesse et grâce, à tout âge et à tout niveau, dans un cadre chaleureux et bienveillant."
-    },
-    "latino": {
-      "name": "Latino",
-      "short": "Salsa, Bachata, Cha-Cha et une énergie pure.",
-      "desc": "Les cours de Latino apportent la chaleur : mouvements de hanches, rythme et jeu de partenaires à travers la Salsa, la Bachata, le Cha-Cha et la Rumba. Venez prêt à transpirer, à rire et à vous laisser aller."
-    },
-    "cta": "Réserver ce style"
+    "stretching": {
+      "name": "Stretching",
+      "lines": ["Souplesse", "Aisance", "Conscience du corps"],
+      "more": "En savoir plus"
+    }
   },
+  "how": {
+    "eyebrow": "Comment ça marche",
+    "title": "En ligne. En direct.\nPetits groupes,\nattention personnelle.",
+    "more": "Découvrir",
+    "steps": ["Choisir le cours", "Choisir l’heure", "Recevoir le lien", "Participer de chez soi"]
+  },
+  "teacher": {
+    "eyebrow": "Votre professeure",
+    "title": "La danse est\nune façon\nde vivre.",
+    "text": "Mon expérience de la scène, du studio et de l’enseignement accompagne les femmes vers plus de technique, de confiance et de liberté.",
+    "more": "Plus"
+  },
+  "footerCta": {
+    "title": "Commencez vos cours.",
+    "text": "Remplissez le formulaire et choisissons ensemble votre premier pas.",
+    "button": "Commencer"
+  },
+  "pages": {
+    "classical": {
+      "title": "Classique",
+      "lead": "Cours en ligne pour la posture, la technique, l’élégance et la force.",
+      "body": "Tous les textes, photos et boutons seront modifiables séparément."
+    },
+    "ballroom": {
+      "title": "Danses de salon",
+      "lead": "Rythme, coordination, confiance et expression.",
+      "body": "Des cours en ligne sans partenaire, des bases au mouvement fluide."
+    },
+    "stretching": {
+      "title": "Stretching",
+      "lead": "Souplesse, aisance et conscience du corps.",
+      "body": "Cours en direct centrés sur la mobilité contrôlée et la liberté du mouvement."
+    },
+    "whyOnline": {
+      "title": "Pourquoi en ligne ?",
+      "lead": "La danse s’adapte à votre vie.",
+      "body": "Pas de trajet. Participez de chez vous ou en voyage. En petit groupe, la professeure vous voit et corrige votre technique."
+    },
+    "about": {
+      "title": "À propos",
+      "lead": "PartyPas rend la danse élégante et accessible au quotidien.",
+      "body": "L’histoire de la marque, la bio et les photos seront modifiables."
+    },
+    "programs": {
+      "title": "Programmes",
+      "lead": "Choisissez le programme adapté à vos objectifs.",
+      "body": "Les noms des forfaits et les prix apparaissent uniquement ici."
+    }
+  },
+  "programList": [
+    { "name": "Classique + Stretching", "details": "8 cours / mois", "price": "8 000 TL" },
+    { "name": "Danses de salon + Stretching", "details": "8 cours / mois", "price": "8 000 TL" },
+    { "name": "The Full Experience", "details": "Classique + Danses de salon + Stretching", "price": "10 000 TL / mois" },
+    { "name": "Cours privé", "details": "1 cours", "price": "2 500 TL" }
+  ],
   "appointment": {
     "eyebrow": "Réserver un cours",
     "title": "Choisissez une date, choisissez une heure, entrez en piste",
@@ -128,11 +141,11 @@
         "excerpt": "Nouveau dans les danses de salon ? Voici comment vous sentir en confiance, pas dépassé."
       },
       {
-        "title": "Pourquoi le Latino est un entraînement complet du corps",
-        "excerpt": "La Salsa et la Bachata ne sont pas que ludiques — c'est aussi une vraie séance de cardio déguisée."
+        "title": "Pourquoi le stretching a sa place dans la semaine de chaque danseur",
+        "excerpt": "Souplesse et conscience du corps ne sont pas un supplément — c'est ce qui rend chaque style plus facile."
       },
       {
-        "title": "Les bases du ballet : ce que la 'première position' entraîne vraiment",
+        "title": "Les bases du classique : ce qu'une bonne posture entraîne vraiment",
         "excerpt": "La première chose que chaque danseur apprend travaille bien plus que ce que l'on croit."
       }
     ],
@@ -150,8 +163,8 @@
         "a": "Après avoir réservé un créneau, notre équipe vous contactera pour organiser le paiement manuellement — nous ne traitons pas encore les paiements sur le site."
       },
       {
-        "q": "Puis-je passer d'un style de danse à un autre ?",
-        "a": "Bien sûr — de nombreux élèves explorent les danses de salon, le classique, le ballet et le latino ensemble pour développer des compétences complètes."
+        "q": "Puis-je combiner plusieurs cours ?",
+        "a": "Bien sûr — de nombreux élèves combinent Classique, Danses de salon et Stretching pour développer des compétences complètes."
       },
       {
         "q": "Que faire si je dois reprogrammer mon cours ?",

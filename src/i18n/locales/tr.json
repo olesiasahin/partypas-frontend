@@ -5,77 +5,90 @@
   },
   "nav": {
     "home": "Ana Sayfa",
-    "danceTypes": "Dans Stilleri",
-    "appointment": "Ders Ayırt",
+    "classes": "Dersler",
+    "programs": "Programlar",
+    "about": "Hakkımızda",
     "blog": "Blog & SSS",
-    "contact": "İletişim"
+    "contact": "İletişim",
+    "cta": "Derslerine başla"
   },
-  "home": {
-    "hero": {
-      "eyebrow": "PartyPas Dans Okulu",
-      "title": "Hareket Et. Gülümse. Tekrar Et.",
-      "subtitle": "İlk adımından ilk dönüşüne kadar PartyPas her bedeni ve her ritmi karşılar — Salon Dansları, Klasik, Bale ve Latin, öğretmeyi seven dansçılar tarafından öğretilir.",
-      "ctaPrimary": "Ders ayırt",
-      "ctaSecondary": "Dans stillerini keşfet"
-    },
-    "tagline": "Hareket Et. Gülümse. Tekrar Et.",
-    "intro": {
-      "title": "Neşe üzerine kurulu bir stüdyo",
-      "text": "PartyPas, çevrimiçi öncelikli bir dans okuludur: stillerimize göz atın, size uygun bir tarih ve saat seçin ve eğitmenlerimizle canlı bir Zoom dersine katılın. Baskı yok, yargı yok — sadece hareket."
-    },
-    "styles": {
-      "title": "Dans stillerimiz",
-      "cta": "Tüm stilleri gör"
-    },
-    "why": {
-      "title": "Neden bizimle dans etmelisiniz",
-      "items": [
-        {
-          "title": "Canlı, kişisel dersler",
-          "text": "Zoom üzerinden küçük gruplar ve özel dersler, böylece eğitmenler hareketinizi gerçekten görüp düzeltebilir."
-        },
-        {
-          "title": "Her seviyeye açık kapı",
-          "text": "Tam anlamıyla yeni başlayanlar da geri dönen dansçılar da — her dersi katılanlara göre şekillendiriyoruz."
-        },
-        {
-          "title": "Esnek programlama",
-          "text": "Size uygun bir tarih ve saat seçin, birkaç tıkla rezervasyonunuzu yapın."
-        }
-      ]
-    },
-    "cta": {
-      "title": "Hareket etmeye hazır mısınız?",
-      "text": "Uygun tarihleri kontrol edin ve yerinizi ayırtın — ödeme, rezervasyondan sonra bizimle doğrudan ayarlanır.",
-      "button": "Dersinizi ayırtın"
-    }
+  "hero": {
+    "title": "KENDİNE\nDOĞRU\nBİR ADIM.",
+    "subtitle": "Dans etmek,\nkendine ayırdığın\nen güzel zamandır.",
+    "cta": "Derslerine başla"
   },
-  "danceTypes": {
-    "eyebrow": "Dans Stilleri",
-    "title": "Dört stil, tek dans pisti",
-    "intro": "İster Salon Danslarının zarafetine, ister Klasik dansın hassasiyetine, ister Balenin inceliğine, ister Latin dansların ateşine ilgi duyun — sizi bekleyen bir ders ve bir eğitmen var.",
+  "disciplines": {
+    "classical": {
+      "name": "Klasik (Balet)",
+      "lines": ["Duruş", "Zarafet", "Güç"],
+      "more": "Detaylı bilgi"
+    },
     "ballroom": {
       "name": "Salon Dansları",
-      "short": "Zarif çift dansı — Vals, Tango, Foxtrot ve daha fazlası.",
-      "desc": "Salon dansları bağ kurmakla ilgilidir: duruş, önderlik ve takip, iki dansçı arasındaki sessiz bir sohbet. Derslerimiz Vals, Tango, Foxtrot ve Viyana Valsini kapsar; ilk dersinizden itibaren duruş, ritim ve partnerlik becerinizi geliştirir."
+      "lines": ["Ritim", "Özgüven", "Feminenlik"],
+      "more": "Detaylı bilgi"
     },
-    "classic": {
-      "name": "Klasik",
-      "short": "Zamansız teknik ve rafine müzikalite.",
-      "desc": "Klasik programımız, klasik dans eğitiminden yararlanarak temel teknik üzerine odaklanır — duruş, müzikalite ve temiz çizgiler. Güçlü temeller isteyen, ardından hangi stile yönelirse yönelsin sağlam bir zemin arayan dansçılar için mükemmel bir başlangıç."
-    },
-    "ballet": {
-      "name": "Bale",
-      "short": "Barda güç, incelik ve disiplin.",
-      "desc": "Barda ilk pozisyonlardan orta alan çalışmalarına ve basit koreografilere kadar Bale derslerimiz, her yaş ve seviyede güç, esneklik ve incelik kazandırır; sıcak ve destekleyici bir ortamda."
-    },
-    "latino": {
-      "name": "Latin",
-      "short": "Salsa, Bachata, Cha-Cha ve saf enerji.",
-      "desc": "Latin dersleri ateşi getirir: kalça hareketleri, ritim ve eğlenceli partner çalışmaları — Salsa, Bachata, Cha-Cha ve Rumba eşliğinde. Terlemeye, gülmeye ve kendinizi bırakmaya hazır gelin."
-    },
-    "cta": "Bu stili ayırt"
+    "stretching": {
+      "name": "Stretching",
+      "lines": ["Esneklik", "Rahatlık", "Beden farkındalığı"],
+      "more": "Detaylı bilgi"
+    }
   },
+  "how": {
+    "eyebrow": "Nasıl işliyor?",
+    "title": "Online. Canlı.\nSana özel hissettiren\nküçük gruplar.",
+    "more": "Detayları keşfet",
+    "steps": ["Dersini seç", "Takvimden saatini ayırt", "Bağlantını al", "Evinden derse katıl"]
+  },
+  "teacher": {
+    "eyebrow": "Öğretmeniniz",
+    "title": "Dans,\nbenim için\nbir yaşam biçimi.",
+    "text": "Yıllar içinde sahnede, stüdyoda ve eğitimde edindiğim tecrübelerle, kadınların dansla güçlenmesine ve kendini ifade etmesine eşlik ediyorum.",
+    "more": "Daha fazla"
+  },
+  "footerCta": {
+    "title": "Derslerine başla.",
+    "text": "Formu doldur ve sana uygun ilk adımı birlikte seçelim.",
+    "button": "Derslerine başla"
+  },
+  "pages": {
+    "classical": {
+      "title": "Klasik",
+      "lead": "Duruş, teknik, zarafet ve güçlü bir beden için canlı online klasik dersleri.",
+      "body": "Bu sayfadaki tüm metinleri, fotoğrafları ve düğmeleri daha sonra admin panelinden bağımsız olarak değiştirebileceksin."
+    },
+    "ballroom": {
+      "title": "Salon Dansları",
+      "lead": "Ritim, koordinasyon, özgüven ve ifade.",
+      "body": "Partner gerektirmeyen online salon dansları dersleri; temel teknikten akıcı harekete kadar ilerleyen yapı."
+    },
+    "stretching": {
+      "title": "Stretching",
+      "lead": "Esneklik, rahatlık ve beden farkındalığı.",
+      "body": "Canlı online stretching dersleri; kontrollü esneme, mobilite ve daha özgür hareket için."
+    },
+    "whyOnline": {
+      "title": "Neden Online?",
+      "lead": "Dans hayatına uyum sağlar.",
+      "body": "Trafik ve yol yok; evinden veya seyahatteyken katıl. Küçük canlı gruplarda öğretmen seni görür, yönlendirir ve tekniğini düzeltir."
+    },
+    "about": {
+      "title": "Hakkımızda",
+      "lead": "PartyPas, dansı günlük hayatın içinde ulaşılabilir ve estetik bir deneyime dönüştürür.",
+      "body": "Bu sayfadaki marka hikâyesi, öğretmen biyografisi ve fotoğraflar tamamen düzenlenebilir olacak."
+    },
+    "programs": {
+      "title": "Programlar",
+      "lead": "İhtiyacına ve hedeflerine uygun programını seç.",
+      "body": "Fiyatlar ve paket isimleri yalnızca bu sayfada gösterilir; ana sayfada gösterilmez."
+    }
+  },
+  "programList": [
+    { "name": "Klasik + Stretching", "details": "8 ders / ay", "price": "8.000 TL" },
+    { "name": "Salon Dansları + Stretching", "details": "8 ders / ay", "price": "8.000 TL" },
+    { "name": "The Full Experience", "details": "Klasik + Salon Dansları + Stretching", "price": "10.000 TL / ay" },
+    { "name": "Bireysel Ders", "details": "Özel ders", "price": "2.500 TL" }
+  ],
   "appointment": {
     "eyebrow": "Ders Ayırt",
     "title": "Bir tarih seçin, bir saat seçin, piste çıkın",
@@ -128,11 +141,11 @@
         "excerpt": "Salon danslarına yeni mi başlıyorsunuz? İşte bunalmadan, kendinden emin bir şekilde derse başlamanın yolu."
       },
       {
-        "title": "Latin dans neden tüm vücudu çalıştıran bir antrenmandır",
-        "excerpt": "Salsa ve Bachata sadece eğlenceli değil — aslında ciddi bir kardiyo antrenmanı."
+        "title": "Stretching neden her dansçının haftasında olmalı",
+        "excerpt": "Esneklik ve beden farkındalığı bir ekstra değil — her stili daha kolay hissettiren şey."
       },
       {
-        "title": "Bale temelleri: 'birinci pozisyon' gerçekte neyi çalıştırır",
+        "title": "Klasik temelleri: güçlü bir duruş gerçekte neyi çalıştırır",
         "excerpt": "Her dansçının öğrendiği ilk şey, düşündüğünüzden çok daha fazlasını içerir."
       }
     ],
@@ -150,8 +163,8 @@
         "a": "Bir zaman dilimi ayırttıktan sonra ekibimiz ödemeyi manuel olarak ayarlamak için sizinle iletişime geçecek — şu an için web sitesinde ödeme işlemi yapmıyoruz."
       },
       {
-        "q": "Dans stilleri arasında geçiş yapabilir miyim?",
-        "a": "Kesinlikle — birçok öğrencimiz iyi yuvarlaklaşmış bir beceri seti oluşturmak için Salon Dansları, Klasik, Bale ve Latin dansları bir arada keşfediyor."
+        "q": "Dersler arasında geçiş yapabilir miyim?",
+        "a": "Kesinlikle — birçok öğrencimiz iyi yuvarlaklaşmış bir beceri seti oluşturmak için Klasik, Salon Dansları ve Stretching'i bir arada keşfediyor."
       },
       {
         "q": "Ya randevumu değiştirmem gerekirse?",

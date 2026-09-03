@@ -1,69 +1,99 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-const STYLE_KEYS = ["ballroom", "classic", "ballet", "latino"];
+const DISCIPLINES = [
+  { key: "classical", to: "/classical", img: "/images/classical.jpg" },
+  { key: "ballroom", to: "/ballroom", img: "/images/ballroom.jpg" },
+  { key: "stretching", to: "/stretching", img: "/images/stretching.jpg" },
+];
+
+function withBreaks(text) {
+  return text.split("\n").map((line, i, arr) => (
+    <span key={i}>
+      {line}
+      {i < arr.length - 1 && <br />}
+    </span>
+  ));
+}
 
 export default function Home() {
   const { t } = useTranslation();
-  const whyItems = t("home.why.items", { returnObjects: true });
+  const steps = t("how.steps", { returnObjects: true });
 
   return (
     <>
-      <section className="hero section">
-        <div className="container hero-inner">
-          <p className="eyebrow">{t("home.hero.eyebrow")}</p>
-          <h1>{t("home.hero.title")}</h1>
-          <p className="hero-subtitle">{t("home.hero.subtitle")}</p>
-          <div className="hero-actions">
-            <Link to="/book" className="btn btn-primary">{t("home.hero.ctaPrimary")}</Link>
-            <Link to="/dance-styles" className="btn btn-outline">{t("home.hero.ctaSecondary")}</Link>
+      <section className="hero">
+        <div className="hero-grid">
+          <div className="hero-copy">
+            <p className="kicker">{t("brand.tagline")}</p>
+            <h1>{withBreaks(t("hero.title"))}</h1>
+            <div className="hero-sub">{withBreaks(t("hero.subtitle"))}</div>
+            <Link to="/book" className="text-link">
+              {t("hero.cta")} →
+            </Link>
+          </div>
+          <div className="hero-image">
+            <img src="/images/hero.jpg" alt="PartyPas" />
+            <img className="hero-seal" src="/logo-burgundy.png" alt="" />
           </div>
         </div>
       </section>
 
-      <section className="section section-alt">
-        <div className="container intro-block">
-          <h2>{t("home.intro.title")}</h2>
-          <p>{t("home.intro.text")}</p>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <h2>{t("home.styles.title")}</h2>
-          <div className="style-grid">
-            {STYLE_KEYS.map((key) => (
-              <Link to={`/dance-styles#${key}`} key={key} className="style-card card">
-                <h3>{t(`danceTypes.${key}.name`)}</h3>
-                <p>{t(`danceTypes.${key}.short`)}</p>
-              </Link>
-            ))}
-          </div>
-          <div className="center-cta">
-            <Link to="/dance-styles" className="btn btn-outline">{t("home.styles.cta")}</Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="section section-alt">
-        <div className="container">
-          <h2>{t("home.why.title")}</h2>
-          <div className="why-grid">
-            {whyItems.map((item, i) => (
-              <div className="why-item" key={i}>
-                <h4>{item.title}</h4>
-                <p>{item.text}</p>
+      <div className="disciplines" id="classes">
+        {DISCIPLINES.map((d, i) => {
+          const lines = t(`disciplines.${d.key}.lines`, { returnObjects: true });
+          return (
+            <section className="discipline" id={d.key} key={d.key}>
+              <div className="discipline-copy">
+                <div className="num">0{i + 1}</div>
+                <h2>{t(`disciplines.${d.key}.name`)}</h2>
+                <ul className="discipline-lines">
+                  {lines.map((line) => (
+                    <li key={line}>{line}</li>
+                  ))}
+                </ul>
+                <Link className="text-link" to={d.to}>
+                  {t(`disciplines.${d.key}.more`)} →
+                </Link>
               </div>
-            ))}
-          </div>
+              <div className="discipline-img">
+                <img src={d.img} alt={t(`disciplines.${d.key}.name`)} />
+              </div>
+            </section>
+          );
+        })}
+      </div>
+
+      <section className="how" id="how">
+        <div className="how-intro">
+          <p className="kicker">{t("how.eyebrow")}</p>
+          <h2>{withBreaks(t("how.title"))}</h2>
+          <Link className="text-link" to="/why-online">
+            {t("how.more")} →
+          </Link>
+        </div>
+        <div className="steps">
+          {steps.map((step, i) => (
+            <div className="step" key={step}>
+              <div className="n">0{i + 1} →</div>
+              <p>{step}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="section cta-band">
-        <div className="container cta-band-inner">
-          <h2>{t("home.cta.title")}</h2>
-          <p>{t("home.cta.text")}</p>
-          <Link to="/book" className="btn btn-gold">{t("home.cta.button")}</Link>
+      <section className="teacher">
+        <div className="teacher-photo">
+          <img src="/images/teacher.jpg" alt="" />
+        </div>
+        <div className="teacher-copy">
+          <p className="kicker">{t("teacher.eyebrow")}</p>
+          <h2>{withBreaks(t("teacher.title"))}</h2>
+          <p>{t("teacher.text")}</p>
+          <Link className="text-link" to="/about">
+            {t("teacher.more")} →
+          </Link>
+          <img className="teacher-mark" src="/logo-burgundy.png" alt="" />
         </div>
       </section>
     </>

@@ -1,11 +1,11 @@
 /* Global layout & component styles for PartyPas. Brand tokens live in
    src/styles/theme.css — this file is layout/behavior only.
 
-   Editorial/luxury design language: a warm-greige canvas with burgundy
-   ink text, two deliberate dark burgundy "anchor" bands (footer, CTA
-   band), thin hairlines instead of card shadows, uppercase tracked-out
-   labels and nav, generous whitespace, metallic gold reserved for
-   buttons and rule lines. */
+   Editorial design language ported from the approved design prototype:
+   a warm ivory/paper canvas, a bordeaux-noir dark header and footer,
+   Cormorant Garamond display type over Montserrat body/nav, thin
+   hairlines instead of card shadows, uppercase tracked-out labels,
+   generous whitespace, gold reserved for rules and buttons. */
 
 body {
   margin: 0;
@@ -25,18 +25,17 @@ body {
 
 main {
   flex: 1;
+  overflow: hidden;
 }
 
-/* Header — deliberate dark anchor band (#2e100f) so the mark and nav
-   stand out immediately; all header text uses light/gold brand tones for
-   contrast against that dark fill, never the burgundy-on-greige ink pair
-   used on the page body. */
+/* ---------- Header ---------- */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: #2e100f;
-  border-bottom: 1px solid rgba(199, 161, 67, 0.28);
+  background: linear-gradient(rgba(54, 23, 28, 0.97), rgba(54, 23, 28, 0.97)),
+    url("/images/burgundy-texture.jpg") center/cover;
+  border-bottom: 1px solid var(--color-border-on-dark);
 }
 
 .site-header-inner {
@@ -44,82 +43,130 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 16px 24px;
+  padding: 10px 24px;
+  min-height: 84px;
 }
 
 .brand-link {
   text-decoration: none;
-  color: var(--vanilla-silk);
+  color: var(--color-text-on-dark);
   display: inline-flex;
   align-items: center;
 }
 
 .logo-word {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.55rem;
-  letter-spacing: 0.06em;
+  font-weight: 500;
+  font-size: 1.35rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--vanilla-silk);
+  color: var(--gold);
+  white-space: nowrap;
 }
 
 .main-nav {
   display: flex;
-  gap: 32px;
+  align-items: center;
+  gap: clamp(16px, 2.6vw, 38px);
 }
 
 .nav-link {
   text-decoration: none;
-  font-weight: 700;
-  font-size: 0.92rem;
+  font-weight: 500;
+  font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: var(--tracking-nav);
-  color: rgba(247, 239, 228, 0.78);
+  color: var(--color-text-on-dark-muted);
   padding: 6px 0;
   border-bottom: 2px solid transparent;
   transition: color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
 }
-
 .nav-link:hover,
 .nav-link.active {
   color: var(--gold);
   border-color: var(--gold);
 }
 
+.nav-dropdown {
+  position: relative;
+}
+.nav-dropdown-panel {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 200px;
+  padding: 10px 0;
+  margin-top: 14px;
+  background: var(--bordeaux-noir);
+  border: 1px solid var(--color-border-on-dark);
+  box-shadow: var(--shadow-soft);
+  display: none;
+  flex-direction: column;
+}
+.nav-dropdown:hover .nav-dropdown-panel,
+.nav-dropdown:focus-within .nav-dropdown-panel {
+  display: flex;
+}
+.nav-dropdown-panel a {
+  padding: 10px 20px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-nav);
+  text-decoration: none;
+  color: var(--color-text-on-dark-muted);
+  white-space: nowrap;
+}
+.nav-dropdown-panel a:hover {
+  color: var(--gold);
+}
+
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
 }
 
-/* Language switcher — a single-row chip group (TR / EN / UA / RU / FR) on
-   screens wide enough for the full nav, so every language is one click
-   away and the active one is always visible; kept to short codes only, on
-   one line, never wrapping. Below the mobile-nav breakpoint the chips
-   would crowd the hamburger button, so a compact native <select> (still
-   short codes, not full language names) takes over instead — the
-   .lang-switcher-wrap media query below is what flips between the two. */
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 11px 18px;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-nav);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+.header-cta:hover {
+  background: var(--gold);
+  color: var(--bordeaux-noir);
+}
+
+/* Language switcher */
 .lang-switcher-wrap {
   display: flex;
   align-items: center;
 }
-
 .lang-chips {
   display: flex;
   align-items: center;
   gap: 4px;
   flex-wrap: nowrap;
 }
-
 .lang-chip {
-  border: 1px solid rgba(247, 239, 228, 0.35);
+  border: 1px solid rgba(245, 231, 208, 0.35);
   background: transparent;
-  color: var(--vanilla-silk);
+  color: var(--color-text-on-dark);
   border-radius: 20px;
   padding: 5px 9px;
   font-family: var(--font-body);
-  font-size: 0.64rem;
-  font-weight: 700;
+  font-size: 0.62rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   line-height: 1;
@@ -134,26 +181,25 @@ main {
 .lang-chip.active {
   background: var(--gold);
   border-color: var(--gold);
-  color: var(--alpine-oat);
+  color: var(--bordeaux-noir);
 }
-
 .lang-select {
   display: none;
-  border: 1px solid rgba(247, 239, 228, 0.35);
-  background: #2e100f;
-  color: var(--vanilla-silk);
+  border: 1px solid rgba(245, 231, 208, 0.35);
+  background: var(--bordeaux-noir);
+  color: var(--color-text-on-dark);
   border-radius: 20px;
   padding: 6px 10px;
   font-family: var(--font-body);
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 0.68rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   cursor: pointer;
 }
 .lang-select option {
-  background: #2e100f;
-  color: var(--vanilla-silk);
+  background: var(--bordeaux-noir);
+  color: var(--color-text-on-dark);
 }
 
 .nav-toggle {
@@ -168,20 +214,21 @@ main {
 .nav-toggle span {
   width: 22px;
   height: 2px;
-  background: var(--vanilla-silk);
+  background: var(--color-text-on-dark);
   display: block;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1080px) {
   .main-nav {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     flex-direction: column;
-    background: #2e100f;
-    border-bottom: 1px solid rgba(199, 161, 67, 0.28);
-    border-top: 1px solid rgba(199, 161, 67, 0.28);
+    align-items: flex-start;
+    background: var(--bordeaux-noir);
+    border-bottom: 1px solid var(--color-border-on-dark);
+    border-top: 1px solid var(--color-border-on-dark);
     padding: 20px 24px;
     display: none;
     gap: 18px;
@@ -189,11 +236,22 @@ main {
   .main-nav.open {
     display: flex;
   }
+  .nav-dropdown-panel {
+    position: static;
+    transform: none;
+    display: flex;
+    margin: 8px 0 0 12px;
+    border: none;
+    background: none;
+    padding: 0;
+    gap: 10px;
+  }
+  .header-cta {
+    display: none;
+  }
   .nav-toggle {
     display: flex;
   }
-  /* Five chips crowd the header once the hamburger appears — swap to the
-     compact dropdown, codes only, no full language names. */
   .lang-chips {
     display: none;
   }
@@ -202,57 +260,227 @@ main {
   }
 }
 
-/* Hero */
+/* ---------- Hero ---------- */
 .hero {
-  padding-top: 120px;
-  padding-bottom: 100px;
-  text-align: center;
-  background: radial-gradient(circle at 50% 0%, rgba(199, 161, 67, 0.16), transparent 55%),
-    var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
 }
-
-.hero-inner {
-  max-width: 780px;
-  margin: 0 auto;
+.hero-grid {
+  display: grid;
+  grid-template-columns: 54% 46%;
+  min-height: 640px;
+}
+.hero-copy {
+  padding: clamp(48px, 8vw, 96px) clamp(24px, 6vw, 72px);
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.hero h1 {
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  line-height: 1.1;
-  font-weight: 500;
-}
-
-.hero-subtitle {
-  font-size: 1.05rem;
-  line-height: 1.75;
-  color: var(--color-text-muted);
-  margin-bottom: 36px;
-  max-width: 560px;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
   justify-content: center;
 }
-
-/* Intro block */
-.intro-block {
-  max-width: 680px;
-  margin: 0 auto;
-  text-align: center;
+.kicker {
+  font-size: 0.68rem;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--muted);
 }
-.intro-block p {
-  font-size: 1.05rem;
+.hero h1 {
+  font-size: clamp(46px, 6.4vw, 92px);
+  line-height: 0.98;
+  font-weight: 400;
+  margin: 24px 0 26px;
+  letter-spacing: -0.02em;
+}
+.hero-sub {
+  max-width: 380px;
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 34px;
+}
+.text-link {
+  display: inline-flex;
+  gap: 14px;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-nav);
+  font-size: 0.72rem;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 5px;
+  width: max-content;
+  text-decoration: none;
+  color: var(--bordeaux-noir);
+  transition: opacity 0.2s ease;
+}
+.text-link:hover {
+  opacity: 0.65;
+}
+.hero-image {
+  position: relative;
+  min-height: 400px;
+  overflow: hidden;
+  background: var(--warm-greige);
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+.hero-image img.hero-seal {
+  position: absolute;
+  right: 6%;
+  bottom: 8%;
+  width: 96px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.85;
+}
+
+/* ---------- Disciplines row ---------- */
+.disciplines {
+  border-bottom: 1px solid var(--color-border);
+}
+.discipline {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  min-height: 320px;
+  border-bottom: 1px solid var(--color-border);
+}
+.discipline:nth-child(even) {
+  background: var(--color-bg-alt);
+}
+.discipline-copy {
+  padding: 42px clamp(24px, 5vw, 72px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.num {
+  font-family: var(--font-display);
+  font-size: 46px;
+  line-height: 0.8;
+  color: var(--gold);
+}
+.discipline h2 {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin: 14px 0 16px;
+  text-transform: uppercase;
+}
+.discipline-lines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.03em;
+}
+.discipline-lines li:not(:last-child)::after {
+  content: "·";
+  margin-left: 18px;
+  color: var(--gold);
+}
+.discipline-img {
+  min-height: 320px;
+  overflow: hidden;
+}
+.discipline-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- How it works ---------- */
+.how {
+  display: grid;
+  grid-template-columns: 34% 66%;
+  border-bottom: 1px solid var(--color-border);
+}
+.how-intro {
+  padding: 56px clamp(24px, 6vw, 72px);
+}
+.how-intro h2 {
+  font-size: clamp(28px, 3.2vw, 38px);
+  line-height: 1.05;
+  margin: 14px 0 26px;
+  font-weight: 400;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: stretch;
+}
+.step {
+  padding: 24px 20px;
+  border-left: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.step .n {
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: var(--gold);
+}
+.step p {
+  font-size: 0.78rem;
+  line-height: 1.6;
+  margin: 8px 0 0;
+}
+
+/* ---------- Teacher teaser (home) ---------- */
+.teacher {
+  display: grid;
+  grid-template-columns: 32% 68%;
+  border-bottom: 1px solid var(--color-border);
+}
+.teacher-photo {
+  position: relative;
+  overflow: hidden;
+  min-height: 340px;
+}
+.teacher-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.teacher-copy {
+  position: relative;
+  padding: 52px clamp(24px, 6vw, 84px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--color-bg-alt);
+  overflow: hidden;
+}
+.teacher-copy h2 {
+  font-size: clamp(32px, 3.6vw, 44px);
+  line-height: 1;
+  font-weight: 400;
+  margin: 0 0 18px;
+}
+.teacher-copy p {
+  font-size: 0.9rem;
   line-height: 1.8;
-  color: var(--color-text-on-dark-muted);
+  color: var(--color-text-muted);
+  max-width: 520px;
+}
+.teacher-mark {
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+  width: 220px;
+  opacity: 0.08;
+  pointer-events: none;
 }
 
-/* Section headings — center, tracked eyebrow, thin rule */
+/* ---------- Section heading centering (reused pages) ---------- */
 .section > .container > h2:not(.cta-band-inner h2) {
   text-align: center;
 }
@@ -261,70 +489,9 @@ main {
   text-align: center;
 }
 
-/* Style grid (home) */
-.style-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1px;
-  margin: 48px 0;
-  background: var(--color-border-soft);
-  border: 1px solid var(--color-border-soft);
-}
-
-.style-card {
-  padding: 40px 28px;
-  text-decoration: none;
-  text-align: center;
-  background: var(--color-bg-raised);
-  border: none;
-  border-radius: 0;
-  transition: background 0.2s ease;
-}
-.style-card h3 {
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 1.05rem;
-}
-.style-card p {
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-.style-card:hover {
-  background: var(--warm-greige);
-}
-
-.center-cta {
-  text-align: center;
-  margin-top: 12px;
-}
-
-/* Why grid */
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 40px;
-  margin-top: 48px;
-  text-align: center;
-}
-.why-item h4 {
-  color: var(--vanilla-silk);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.95rem;
-}
-.why-item p {
-  color: var(--color-text-on-dark-muted);
-  line-height: 1.7;
-  font-size: 0.95rem;
-}
-
-/* CTA band — warm-greige anchor (#c8bba9), framed with a metallic gold
-   rule; text drops to the burgundy ink pair used on the light canvas
-   since the band is no longer dark. */
 .cta-band {
-  background: #c8bba9;
-  color: var(--burgundy-noir);
+  background: var(--color-bg-alt);
+  color: var(--color-text);
   text-align: center;
 }
 .cta-band .container {
@@ -332,12 +499,6 @@ main {
   border-style: solid;
   border-image: var(--gold-metallic-h) 1;
   padding: 72px 24px;
-}
-.cta-band h2 {
-  color: var(--burgundy-noir);
-}
-.cta-band .eyebrow {
-  color: var(--burgundy-noir);
 }
 .cta-band-inner {
   max-width: 560px;
@@ -348,7 +509,6 @@ main {
   margin-bottom: 32px;
 }
 
-/* Dance styles page */
 .page-intro {
   max-width: 680px;
   margin: 0 auto 56px;
@@ -357,31 +517,93 @@ main {
   line-height: 1.8;
 }
 
-.style-list {
+/* ---------- Inner page hero (class pages, why-online, about) ---------- */
+.inner-hero {
+  display: grid;
+  grid-template-columns: 46% 54%;
+  min-height: 520px;
+  border-bottom: 1px solid var(--color-border);
+}
+.inner-copy {
+  padding: clamp(48px, 8vw, 100px) clamp(24px, 6vw, 72px);
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
-.style-detail {
-  padding: 48px 0;
-  scroll-margin-top: 100px;
-  border-top: 1px solid var(--color-border-soft);
-  text-align: center;
+.inner-copy h1 {
+  font-size: clamp(44px, 5.6vw, 76px);
+  line-height: 0.95;
+  font-weight: 400;
+  margin: 18px 0 20px;
 }
-.style-detail:last-child {
-  border-bottom: 1px solid var(--color-border-soft);
+.inner-copy p {
+  font-family: var(--font-display);
+  font-size: clamp(19px, 1.8vw, 23px);
+  line-height: 1.25;
+  max-width: 480px;
+  margin: 0 0 30px;
+  color: var(--ink);
 }
-.style-detail h2 {
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+.inner-image {
+  min-height: 320px;
+  overflow: hidden;
 }
-.style-detail p {
+.inner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.content-section {
+  padding: 72px 0;
+  border-top: 1px solid var(--color-border);
+}
+.content-section .container {
+  max-width: 760px;
+}
+.content-section h2 {
+  font-size: clamp(30px, 3.4vw, 42px);
+  margin: 0 0 22px;
+}
+.content-section p {
+  line-height: 1.9;
+  font-size: 0.95rem;
   color: var(--color-text-muted);
-  line-height: 1.8;
-  margin: 0 auto 28px;
-  max-width: 640px;
 }
 
-/* Appointment / booking */
+/* ---------- Programs ---------- */
+.program-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--color-border-soft);
+  border: 1px solid var(--color-border-soft);
+  max-width: none;
+  margin-top: 8px;
+}
+.program-card {
+  background: var(--color-bg-raised);
+  padding: 38px;
+}
+.program-card h3 {
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+.program-card .details {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+.program-card .price {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: var(--bordeaux-noir);
+}
+
+/* ---------- Booking / appointment (kept from previous build) ---------- */
 .zoom-booking {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -394,7 +616,6 @@ main {
     grid-template-columns: 1fr;
   }
 }
-
 .booking-steps h3 {
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -416,7 +637,7 @@ main {
   border-left: 2px solid var(--gold-soft);
 }
 .booking-steps strong {
-  color: var(--burgundy-noir);
+  color: var(--bordeaux-noir);
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.06em;
@@ -426,7 +647,6 @@ main {
   line-height: 1.6;
   font-size: 0.95rem;
 }
-
 .booking-widget {
   padding: 40px;
 }
@@ -444,7 +664,7 @@ main {
   border: 1px dashed var(--color-border);
   padding: 40px 28px;
   text-align: center;
-  background: var(--warm-greige);
+  background: var(--color-bg-alt);
 }
 .booking-placeholder p {
   color: var(--color-text-muted);
@@ -458,7 +678,7 @@ main {
   line-height: 1.6;
 }
 
-/* Contact page */
+/* ---------- Contact page ---------- */
 .contact-email-card {
   display: flex;
   flex-direction: column;
@@ -476,7 +696,7 @@ main {
 .contact-email-link {
   font-family: var(--font-display);
   font-size: 1.9rem;
-  color: var(--burgundy-noir);
+  color: var(--bordeaux-noir);
   text-decoration: none;
   letter-spacing: 0.02em;
 }
@@ -499,7 +719,7 @@ main {
   margin: 32px auto 0;
 }
 
-/* Blog */
+/* ---------- Blog ---------- */
 .post-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -515,7 +735,7 @@ main {
   border-radius: 0;
 }
 .post-card h3 {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
 }
 .post-card p {
   color: var(--color-text-muted);
@@ -525,13 +745,13 @@ main {
 }
 .read-more {
   font-weight: 500;
-  color: var(--burgundy-noir);
-  font-size: 0.78rem;
+  color: var(--bordeaux-noir);
+  font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
-/* FAQ */
+/* ---------- FAQ ---------- */
 .faq-list {
   display: flex;
   flex-direction: column;
@@ -540,6 +760,11 @@ main {
 }
 .faq-item {
   padding: 0 4px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border-on-dark);
+  border-radius: 0;
+  box-shadow: none;
 }
 .faq-question {
   width: 100%;
@@ -550,69 +775,75 @@ main {
   justify-content: space-between;
   gap: 20px;
   padding: 24px 4px;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-family: var(--font-display);
   font-weight: 500;
   text-align: left;
   cursor: pointer;
-  color: var(--color-text);
+  color: var(--color-text-on-dark);
 }
 .faq-icon {
-  color: var(--burgundy-noir);
+  color: var(--gold);
   font-size: 1.2rem;
   flex-shrink: 0;
 }
 .faq-answer {
   padding: 0 24px 28px 4px;
-  color: var(--color-text-muted);
+  color: var(--color-text-on-dark-muted);
   line-height: 1.7;
 }
 
-/* Footer — the second dark anchor band */
+/* ---------- Footer — the second dark anchor band ---------- */
 .site-footer {
-  background: var(--color-bg-dark-deep);
+  background: linear-gradient(rgba(54, 23, 28, 0.98), rgba(32, 10, 9, 0.98)),
+    url("/images/burgundy-texture.jpg") center/cover;
   color: var(--color-text-on-dark);
-  padding: 56px 0 24px;
-  margin-top: 40px;
   border-top: 1px solid var(--color-border-on-dark);
 }
-.footer-inner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 28px;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 28px;
-  border-bottom: 1px solid var(--color-border-on-dark);
+.footer-grid {
+  display: grid;
+  grid-template-columns: 28% 24% 26% 22%;
+  min-height: 200px;
 }
-.footer-brand {
+.footer-cell {
+  padding: 34px 32px;
+  border-right: 1px solid rgba(245, 231, 208, 0.1);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 8px;
 }
-.footer-brand .logo-word {
-  color: var(--color-text-on-dark);
-  /* Base .logo-word is sized for the 60px header mark — scale the
-     wordmark down to match the footer's smaller 42px icon so the two
-     stay in the same proportion instead of a big word next to a tiny mark. */
+.footer-cell .logo-word {
   font-size: 1.05rem;
 }
 .footer-tagline {
   font-style: italic;
   color: var(--color-text-on-dark-muted);
+  margin: 6px 0 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+}
+.footer-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  color: var(--gold);
+  margin: 0 0 6px;
+}
+.footer-cell p {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--color-text-on-dark-muted);
   margin: 0;
-  font-size: 0.88rem;
-  letter-spacing: 0.04em;
 }
 .footer-nav {
   display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
 }
 .footer-nav a {
   text-decoration: none;
   color: var(--color-text-on-dark-muted);
-  font-size: 0.76rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: var(--tracking-nav);
 }
@@ -623,11 +854,59 @@ main {
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 0.02em;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 .footer-legal {
   color: var(--color-text-on-dark-muted);
-  font-size: 0.75rem;
-  padding: 20px 0 0;
+  font-size: 0.72rem;
+  padding: 18px 0;
   text-align: center;
+  border-top: 1px solid rgba(245, 231, 208, 0.08);
+  margin: 0;
+}
+
+@media (max-width: 1080px) {
+  .hero-grid,
+  .discipline,
+  .how,
+  .teacher,
+  .inner-hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-grid {
+    min-height: auto;
+  }
+  .hero-copy {
+    padding: 56px 24px 40px;
+  }
+  .hero-image {
+    min-height: 440px;
+  }
+  .discipline-img {
+    min-height: 320px;
+  }
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .teacher-mark {
+    display: none;
+  }
+  .teacher-copy {
+    background: var(--color-bg-alt);
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-cell {
+    border-bottom: 1px solid rgba(245, 231, 208, 0.08);
+  }
+  .inner-copy {
+    padding: 56px 24px;
+  }
+  .inner-image {
+    min-height: 380px;
+  }
+  .program-list {
+    grid-template-columns: 1fr;
+  }
 }

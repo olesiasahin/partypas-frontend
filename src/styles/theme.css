@@ -1,32 +1,40 @@
 /*
-  PartyPas brand theme — luxury/editorial pass, v2
-  A warm greige canvas (the brand's neutral) now carries the site, with
-  deep noble-burgundy ink for all text — high contrast, warm, readable.
-  Burgundy is kept as two deliberate dark "anchor" bands (header underline
-  accents aside, mainly the footer and the CTA band) for light/dark
-  rhythm, the way many premium sites bookend a light body with a dark
-  nav/footer. Gold is rendered as a metallic gradient everywhere it
-  appears as a fill (buttons, rules, borders) rather than a flat swatch;
-  small body-sized text stays in burgundy ink rather than gold, since
-  flat gold-on-greige fails basic legibility — the metallic gradient
-  fixes this for larger/graphic uses but plain text needs real contrast.
+  PartyPas brand theme — editorial redesign, v3 (2026-09-03).
 
-  Cherry Velvet remains retired from the palette per prior direction.
+  This replaces the v2 approximated palette with the palette and
+  typography from the approved design prototype
+  (PartyPas_editable_prototype_v1). Brand color variable *names* are kept
+  from the original six (vanilla silk, alpine oat, warm greige, cherry
+  velvet, bordeaux noir, gold) so the rest of the app never needs to
+  change when the palette does; their *values* now match the prototype.
 
-  NOTE: exact hex values for the named brand colors were not supplied, so
-  reasonable approximations were chosen below — swap them for your
-  official swatches whenever you have them; everything in the app reads
-  from these variables, so a palette change is a one-file edit.
+  Canvas: a warm ivory/paper/champagne neutral. Ink: a near-black
+  bordeaux. Two dark bordeaux "anchor" bands (header, footer) bookend the
+  light body, with gold reserved for rules, buttons and small accents.
+
+  NOTE: "Cherry Velvet" isn't used as a fill anywhere in this design (the
+  prototype's approved palette doesn't call for it) — it's kept below as
+  a reserved deep-rose value, available later for a hover/badge/sale
+  accent, derived to sit naturally between bordeaux noir and the warm
+  neutrals. Swap it for an official swatch if one is ever supplied.
 */
 :root {
-  --vanilla-silk: #F7EFE4;
-  --alpine-oat: #2e100f;
-  --warm-greige: #C8BBA9;
-  --burgundy-noir: rgb(70, 20, 19); /* "noble burgundy" — now the ink color */
-  --burgundy-noir-raised: #2e100f;
-  --burgundy-noir-deep: #200a09;
-  --gold: #C7A143;
-  --gold-soft: rgba(199, 161, 67, 0.4);
+  /* --- the six named brand colors --- */
+  --vanilla-silk: #f2ebdf; /* "paper" — lightest neutral, page canvas */
+  --alpine-oat: #efe7da; /* "ivory" — secondary light neutral */
+  --warm-greige: #e6d7c3; /* "champagne" — warm mid neutral, card fills */
+  --bordeaux-noir: #36171c; /* "burgundy" — dark ink & anchor bands */
+  --cherry-velvet: #7a2432; /* reserved accent — not used as a fill yet */
+  --gold: #c89b4c;
+
+  /* supporting neutrals from the approved design */
+  --graphite: #242628;
+  --ink: #2a1a19;
+  --muted: #6d625b;
+  --line: rgba(54, 23, 28, 0.18);
+  --line-on-dark: rgba(200, 155, 76, 0.3);
+
+  --gold-soft: rgba(200, 155, 76, 0.35);
   --gold-metallic: linear-gradient(
     120deg,
     #7c5e22 0%,
@@ -48,41 +56,43 @@
     #7c5e22 100%
   );
 
-  /* Main canvas — warm greige, with burgundy ink for text. */
-  --color-bg: var(--warm-greige);
+  /* semantic roles */
+  --color-bg: var(--vanilla-silk);
   --color-bg-alt: var(--alpine-oat);
-  --color-bg-raised: var(--vanilla-silk);
-  --color-text: var(--burgundy-noir);
-  --color-text-muted: rgba(70, 20, 19, 0.68);
-  --color-border: rgba(70, 20, 19, 0.2);
-  --color-border-soft: rgba(70, 20, 19, 0.14);
+  --color-bg-raised: #ffffff;
+  --color-bg-card: var(--warm-greige);
+  --color-text: var(--ink);
+  --color-text-muted: var(--muted);
+  --color-border: var(--line);
+  --color-border-soft: rgba(54, 23, 28, 0.1);
 
-  /* Dark "anchor" bands — footer, CTA band. */
-  --color-bg-dark: var(--burgundy-noir-raised);
-  --color-bg-dark-deep: var(--burgundy-noir-deep);
-  --color-text-on-dark: var(--vanilla-silk);
-  --color-text-on-dark-muted: rgba(247, 239, 228, 0.72);
-  --color-border-on-dark: rgba(247, 239, 228, 0.16);
+  --color-bg-dark: var(--bordeaux-noir);
+  --color-bg-dark-deep: #200a09;
+  --color-text-on-dark: #f5e7d0;
+  --color-text-on-dark-muted: rgba(245, 231, 208, 0.72);
+  --color-border-on-dark: var(--line-on-dark);
 
   --color-accent: var(--gold);
 
-  --font-display: "Bodoni Moda", "Didot", Georgia, "Times New Roman", serif;
-  --font-body: "Bodoni Moda", Georgia, "Times New Roman", serif;
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Montserrat", Arial, sans-serif;
 
-  --tracking-label: 0.18em;
-  --tracking-nav: 0.14em;
+  --tracking-label: 0.16em;
+  --tracking-nav: 0.11em;
 
   --radius-sm: 2px;
   --radius-md: 3px;
-  --shadow-soft: 0 18px 44px rgba(70, 20, 19, 0.16);
-  --max-width: 1180px;
+  --shadow-soft: 0 18px 44px rgba(54, 23, 28, 0.14);
+  --max-width: 1240px;
 }
 
 * {
   box-sizing: border-box;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   margin: 0;
   padding: 0;
   background: var(--color-bg);
@@ -91,10 +101,13 @@ html, body, #root {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: 0.01em;
+  font-weight: 400;
+  letter-spacing: -0.01em;
   margin: 0 0 0.5em;
 }
 
@@ -108,8 +121,7 @@ a {
   padding: 0 24px;
 }
 
-/* Metallic gold — used for fills (buttons) and thin rule lines, never as
-   small body text (fails contrast against the light canvas). */
+/* Metallic gold — fills and thin rule lines only, never small body text. */
 .metallic-text {
   background: var(--gold-metallic);
   -webkit-background-clip: text;
@@ -118,60 +130,57 @@ a {
   color: var(--gold);
 }
 
-/* Buttons — thin, tracked-out, mostly ghost. Flat gold fill is reserved
-   for a single primary action per page. */
+/* Buttons — thin, tracked-out, mostly ghost. */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 14px 32px;
+  gap: 10px;
+  padding: 14px 30px;
   border-radius: var(--radius-md);
-  border: 1px solid var(--gold);
+  border: 1px solid var(--bordeaux-noir);
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: var(--tracking-nav);
   cursor: pointer;
   transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   text-decoration: none;
   background: transparent;
-  color: var(--burgundy-noir);
+  color: var(--bordeaux-noir);
 }
 .btn:hover {
-  background: #2e100f;
-  border-color: transparent;
-  color: var(--vanilla-silk);
+  background: var(--bordeaux-noir);
+  border-color: var(--bordeaux-noir);
+  color: var(--color-text-on-dark);
 }
 
 .btn-primary,
 .btn-gold {
   background: var(--gold);
-  border-color: transparent;
-  color: var(--burgundy-noir);
+  border-color: var(--gold);
+  color: var(--bordeaux-noir);
 }
 .btn-primary:hover,
 .btn-gold:hover {
-  background: #2e100f;
-  border-color: transparent;
-  color: var(--vanilla-silk);
+  background: var(--bordeaux-noir);
+  border-color: var(--bordeaux-noir);
+  color: var(--color-text-on-dark);
   transform: translateY(-1px);
 }
 
 .btn-outline {
   background: transparent;
-  border-color: var(--gold);
-  color: var(--burgundy-noir);
+  border-color: var(--bordeaux-noir);
+  color: var(--bordeaux-noir);
 }
 .btn-outline:hover {
-  background: #2e100f;
-  border-color: transparent;
-  color: var(--vanilla-silk);
+  background: var(--bordeaux-noir);
+  border-color: var(--bordeaux-noir);
+  color: var(--color-text-on-dark);
 }
 
-/* Panels — a thin ink hairline on the warm canvas, lifted with a touch of
-   vanilla-silk fill, no heavy drop shadow. */
 .card {
   background: var(--color-bg-raised);
   color: var(--color-text);
@@ -185,13 +194,13 @@ a {
 }
 
 .section-alt {
-  background: var(--color-bg-alt);
+  background: var(--color-bg-dark);
   color: var(--color-text-on-dark);
   border-top: 1px solid var(--color-border-on-dark);
   border-bottom: 1px solid var(--color-border-on-dark);
 }
 .section-alt .eyebrow {
-  color: var(--color-text-on-dark);
+  color: var(--gold);
 }
 
 .section-dark {
@@ -202,9 +211,9 @@ a {
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: var(--tracking-label);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 500;
-  color: var(--burgundy-noir);
+  color: var(--bordeaux-noir);
   position: relative;
   padding-bottom: 14px;
 }
@@ -218,6 +227,7 @@ a {
   height: 2px;
   background: var(--gold-metallic);
 }
-.section-dark .eyebrow {
-  color: var(--color-text-on-dark);
+.section-dark .eyebrow,
+.section-alt .eyebrow {
+  color: var(--gold);
 }
