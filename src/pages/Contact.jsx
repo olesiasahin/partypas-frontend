@@ -1,29 +1,53 @@
 import { useTranslation } from "react-i18next";
-import ZoomBooking from "../components/ZoomBooking";
+import InnerPage from "../components/InnerPage";
+import { CONTACT, IMAGES } from "../siteConfig";
 
+// Mirrors the prototype's contact page: inner hero + a 2-column grid of
+// contact channels. Channels render only when set in siteConfig.js — per
+// the PartyPas spec only the email is public for now.
 export default function Contact() {
   const { t } = useTranslation();
+  const page = t("pages.contact", { returnObjects: true });
+  const c = CONTACT;
 
   return (
-    <section className="section">
-      <div className="container">
-        <p className="eyebrow">{t("contact.eyebrow")}</p>
-        <h1>{t("contact.title")}</h1>
-        <p className="page-intro">{t("contact.text")}</p>
-
-        <div className="contact-email-card card">
-          <span className="eyebrow">{t("contact.emailLabel")}</span>
-          <a href={`mailto:${t("contact.email")}`} className="contact-email-link">
-            {t("contact.email")}
-          </a>
+    <InnerPage page={page} image={IMAGES.hero}>
+      <section className="content-section">
+        <div className="contact-grid">
+          {c.instagram && (
+            <div>
+              <h2>Instagram</h2>
+              <p>
+                <a href={c.instagramUrl || "https://instagram.com"} target="_blank" rel="noreferrer">
+                  {c.instagram}
+                </a>
+              </p>
+            </div>
+          )}
+          {c.phone && (
+            <div>
+              <h2>WhatsApp</h2>
+              <p>
+                <a href={`tel:${c.phone.replace(/\s/g, "")}`}>{c.phone}</a>
+              </p>
+            </div>
+          )}
+          <div>
+            <h2>E-mail</h2>
+            <p>
+              <a href={`mailto:${c.email}`}>{c.email}</a>
+            </p>
+          </div>
+          {c.whatsapp && (
+            <div>
+              <h2>PartyPas</h2>
+              <a className="text-link" href={c.whatsapp} target="_blank" rel="noreferrer">
+                WhatsApp →
+              </a>
+            </div>
+          )}
         </div>
-
-        <div className="contact-appointment">
-          <h2>{t("contact.appointmentTitle")}</h2>
-          <p>{t("contact.appointmentText")}</p>
-          <ZoomBooking compact />
-        </div>
-      </div>
-    </section>
+      </section>
+    </InnerPage>
   );
 }

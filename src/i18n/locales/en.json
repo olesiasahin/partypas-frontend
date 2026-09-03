@@ -8,6 +8,7 @@
     "classes": "Classes",
     "programs": "Programs",
     "about": "About",
+    "how": "How it works",
     "blog": "Blog & FAQ",
     "contact": "Contact",
     "cta": "Start your classes"
@@ -20,17 +21,29 @@
   "disciplines": {
     "classical": {
       "name": "Classical",
-      "lines": ["Posture", "Elegance", "Strength"],
+      "lines": [
+        "Posture",
+        "Elegance",
+        "Strength"
+      ],
       "more": "Learn more"
     },
     "ballroom": {
       "name": "Ballroom Dance",
-      "lines": ["Rhythm", "Confidence", "Femininity"],
+      "lines": [
+        "Rhythm",
+        "Confidence",
+        "Femininity"
+      ],
       "more": "Learn more"
     },
     "stretching": {
       "name": "Stretching",
-      "lines": ["Flexibility", "Ease", "Body awareness"],
+      "lines": [
+        "Flexibility",
+        "Ease",
+        "Body awareness"
+      ],
       "more": "Learn more"
     }
   },
@@ -38,7 +51,12 @@
     "eyebrow": "How it works",
     "title": "Live online.\nSmall groups\nthat feel personal.",
     "more": "Discover details",
-    "steps": ["Choose a class", "Choose your time", "Get your link", "Join from home"]
+    "steps": [
+      "Choose a class",
+      "Choose your time",
+      "Get your link",
+      "Join from home"
+    ]
   },
   "teacher": {
     "eyebrow": "Your teacher",
@@ -81,18 +99,44 @@
       "title": "Programs",
       "lead": "Choose a program that suits your goals.",
       "body": "Package names and prices live only on this page, not on the homepage."
+    },
+    "contact": {
+      "title": "Contact",
+      "lead": "Questions? Get in touch.",
+      "body": "Instagram, WhatsApp, email and phone details can be changed here."
+    },
+    "trial": {
+      "title": "Start your classes",
+      "lead": "Complete the form for your first class.",
+      "body": "The first prototype contains the visual form structure. Real submissions and payments can be connected next."
     }
   },
   "programList": [
-    { "name": "Classical + Stretching", "details": "8 classes / month", "price": "8,000 TL" },
-    { "name": "Ballroom + Stretching", "details": "8 classes / month", "price": "8,000 TL" },
-    { "name": "The Full Experience", "details": "Classical + Ballroom + Stretching", "price": "10,000 TL / month" },
-    { "name": "Private Class", "details": "1 private class", "price": "2,500 TL" }
+    {
+      "name": "Classical + Stretching",
+      "details": "8 classes / month",
+      "price": "8,000 TL"
+    },
+    {
+      "name": "Ballroom + Stretching",
+      "details": "8 classes / month",
+      "price": "8,000 TL"
+    },
+    {
+      "name": "The Full Experience",
+      "details": "Classical + Ballroom + Stretching",
+      "price": "10,000 TL / month"
+    },
+    {
+      "name": "Private Class",
+      "details": "1 private class",
+      "price": "2,500 TL"
+    }
   ],
   "appointment": {
     "eyebrow": "Book a Class",
-    "title": "Pick a date, pick an hour, hit the floor",
-    "intro": "Choose an available date and time below and reserve your spot. Your class will take place live over Zoom with one of our instructors.",
+    "title": "Start your classes",
+    "intro": "Complete the form for your first class. Choose an available date and time below and reserve your spot — your class will take place live over Zoom with one of our instructors.",
     "steps": {
       "title": "How booking works",
       "items": [
@@ -121,8 +165,8 @@
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Let's dance",
-    "text": "The quickest way to reach us right now is by email. Phone and studio address details are coming soon.",
+    "title": "Contact",
+    "text": "Questions? Get in touch. The quickest way to reach us right now is by email — phone and studio address details are coming soon.",
     "emailLabel": "Email us",
     "email": "letsdance@partypas.com",
     "appointmentTitle": "Or skip straight to booking",

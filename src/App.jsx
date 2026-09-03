@@ -14,7 +14,7 @@ export default function App() {
   return (
     <div className="app-shell">
       <Header />
-      <main>
+      <main className="page">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/classical" element={<ClassPage discKey="classical" image="/images/classical.jpg" />} />

@@ -41,7 +41,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: "en",
+    fallbackLng: "tr",
     supportedLngs: SUPPORTED_LANGUAGES.map((l) => l.code),
     lng: cfLang && SUPPORTED_LANGUAGES.some((l) => l.code === cfLang) ? cfLang : undefined,
     interpolation: { escapeValue: false },

@@ -1,233 +1,80 @@
 /*
-  PartyPas brand theme — editorial redesign, v3 (2026-09-03).
+  PartyPas brand theme — pixel-parity port of the approved design
+  prototype (PartyPas_editable_prototype_v1/styles.css), 2026-09-03.
 
-  This replaces the v2 approximated palette with the palette and
-  typography from the approved design prototype
-  (PartyPas_editable_prototype_v1). Brand color variable *names* are kept
-  from the original six (vanilla silk, alpine oat, warm greige, cherry
-  velvet, bordeaux noir, gold) so the rest of the app never needs to
-  change when the palette does; their *values* now match the prototype.
+  The prototype's own variable names (--ivory, --champagne, --paper,
+  --burgundy, --graphite, --gold, --ink, --muted, --line, --serif, --sans)
+  are kept verbatim so layout rules in index.css can be copied 1:1 from
+  the prototype. The six named brand colors are aliased onto them so the
+  rest of the codebase can keep using brand names.
 
-  Canvas: a warm ivory/paper/champagne neutral. Ink: a near-black
-  bordeaux. Two dark bordeaux "anchor" bands (header, footer) bookend the
-  light body, with gold reserved for rules, buttons and small accents.
-
-  NOTE: "Cherry Velvet" isn't used as a fill anywhere in this design (the
-  prototype's approved palette doesn't call for it) — it's kept below as
-  a reserved deep-rose value, available later for a hover/badge/sale
-  accent, derived to sit naturally between bordeaux noir and the warm
-  neutrals. Swap it for an official swatch if one is ever supplied.
+  "Cherry Velvet" isn't used as a fill anywhere in this design — kept as a
+  reserved accent value only.
 */
 :root {
-  /* --- the six named brand colors --- */
-  --vanilla-silk: #f2ebdf; /* "paper" — lightest neutral, page canvas */
-  --alpine-oat: #efe7da; /* "ivory" — secondary light neutral */
-  --warm-greige: #e6d7c3; /* "champagne" — warm mid neutral, card fills */
-  --bordeaux-noir: #36171c; /* "burgundy" — dark ink & anchor bands */
-  --cherry-velvet: #7a2432; /* reserved accent — not used as a fill yet */
-  --gold: #c89b4c;
-
-  /* supporting neutrals from the approved design */
+  /* prototype palette (authoritative) */
+  --ivory: #efe7da;
+  --champagne: #e6d7c3;
+  --paper: #f2ebdf;
+  --burgundy: #36171c;
   --graphite: #242628;
+  --gold: #c89b4c;
   --ink: #2a1a19;
   --muted: #6d625b;
   --line: rgba(54, 23, 28, 0.18);
-  --line-on-dark: rgba(200, 155, 76, 0.3);
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Montserrat", Arial, sans-serif;
 
-  --gold-soft: rgba(200, 155, 76, 0.35);
-  --gold-metallic: linear-gradient(
-    120deg,
-    #7c5e22 0%,
-    #d8b45f 18%,
-    #f6e7b0 36%,
-    #cf9f4c 52%,
-    #8a6a26 68%,
-    #f1dfa0 84%,
-    #7c5e22 100%
-  );
-  --gold-metallic-h: linear-gradient(
-    90deg,
-    #7c5e22 0%,
-    #d8b45f 20%,
-    #f6e7b0 40%,
-    #cf9f4c 55%,
-    #8a6a26 70%,
-    #f1dfa0 88%,
-    #7c5e22 100%
-  );
+  /* brand-name aliases */
+  --vanilla-silk: var(--paper);
+  --alpine-oat: var(--ivory);
+  --warm-greige: var(--champagne);
+  --bordeaux-noir: var(--burgundy);
+  --cherry-velvet: #7a2432; /* reserved, unused */
 
-  /* semantic roles */
-  --color-bg: var(--vanilla-silk);
-  --color-bg-alt: var(--alpine-oat);
-  --color-bg-raised: #ffffff;
-  --color-bg-card: var(--warm-greige);
-  --color-text: var(--ink);
+  /* semantic roles used by the Blog & FAQ page (not in the prototype) */
   --color-text-muted: var(--muted);
   --color-border: var(--line);
   --color-border-soft: rgba(54, 23, 28, 0.1);
-
-  --color-bg-dark: var(--bordeaux-noir);
-  --color-bg-dark-deep: #200a09;
   --color-text-on-dark: #f5e7d0;
   --color-text-on-dark-muted: rgba(245, 231, 208, 0.72);
-  --color-border-on-dark: var(--line-on-dark);
-
-  --color-accent: var(--gold);
-
-  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --font-body: "Montserrat", Arial, sans-serif;
-
-  --tracking-label: 0.16em;
-  --tracking-nav: 0.11em;
-
-  --radius-sm: 2px;
-  --radius-md: 3px;
-  --shadow-soft: 0 18px 44px rgba(54, 23, 28, 0.14);
-  --max-width: 1240px;
+  --color-border-on-dark: rgba(200, 155, 76, 0.3);
+  --font-display: var(--serif);
+  --font-body: var(--sans);
 }
 
 * {
   box-sizing: border-box;
 }
-
-html,
-body,
-#root {
-  margin: 0;
-  padding: 0;
-  background: var(--color-bg);
-  color: var(--color-text);
-  font-family: var(--font-body);
+html {
   scroll-behavior: smooth;
 }
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--font-display);
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  margin: 0 0 0.5em;
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.5), transparent 28%),
+    linear-gradient(rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)),
+    var(--ivory);
+  font-family: var(--sans);
 }
-
+body:before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.22;
+  background-image:
+    repeating-radial-gradient(circle at 0 0, rgba(64, 42, 32, 0.08) 0 1px, transparent 1px 4px),
+    linear-gradient(110deg, transparent 0 49%, rgba(255, 255, 255, 0.18) 50%, transparent 51%);
+  background-size: 7px 7px, 100% 100%;
+  mix-blend-mode: multiply;
+}
 a {
   color: inherit;
-}
-
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* Metallic gold — fills and thin rule lines only, never small body text. */
-.metallic-text {
-  background: var(--gold-metallic);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: var(--gold);
-}
-
-/* Buttons — thin, tracked-out, mostly ghost. */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 14px 30px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--bordeaux-noir);
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-nav);
-  cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   text-decoration: none;
-  background: transparent;
-  color: var(--bordeaux-noir);
 }
-.btn:hover {
-  background: var(--bordeaux-noir);
-  border-color: var(--bordeaux-noir);
-  color: var(--color-text-on-dark);
-}
-
-.btn-primary,
-.btn-gold {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--bordeaux-noir);
-}
-.btn-primary:hover,
-.btn-gold:hover {
-  background: var(--bordeaux-noir);
-  border-color: var(--bordeaux-noir);
-  color: var(--color-text-on-dark);
-  transform: translateY(-1px);
-}
-
-.btn-outline {
-  background: transparent;
-  border-color: var(--bordeaux-noir);
-  color: var(--bordeaux-noir);
-}
-.btn-outline:hover {
-  background: var(--bordeaux-noir);
-  border-color: var(--bordeaux-noir);
-  color: var(--color-text-on-dark);
-}
-
-.card {
-  background: var(--color-bg-raised);
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-soft);
-}
-
-.section {
-  padding: 96px 0;
-}
-
-.section-alt {
-  background: var(--color-bg-dark);
-  color: var(--color-text-on-dark);
-  border-top: 1px solid var(--color-border-on-dark);
-  border-bottom: 1px solid var(--color-border-on-dark);
-}
-.section-alt .eyebrow {
-  color: var(--gold);
-}
-
-.section-dark {
-  background: var(--color-bg-dark);
-  color: var(--color-text-on-dark);
-}
-
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-label);
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: var(--bordeaux-noir);
-  position: relative;
-  padding-bottom: 14px;
-}
-.eyebrow::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 32px;
-  height: 2px;
-  background: var(--gold-metallic);
-}
-.section-dark .eyebrow,
-.section-alt .eyebrow {
-  color: var(--gold);
+button {
+  font: inherit;
 }

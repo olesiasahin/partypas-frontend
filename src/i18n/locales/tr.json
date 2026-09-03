@@ -8,6 +8,7 @@
     "classes": "Dersler",
     "programs": "Programlar",
     "about": "Hakkımızda",
+    "how": "Nasıl İşliyor?",
     "blog": "Blog & SSS",
     "contact": "İletişim",
     "cta": "Derslerine başla"
@@ -20,17 +21,29 @@
   "disciplines": {
     "classical": {
       "name": "Klasik (Balet)",
-      "lines": ["Duruş", "Zarafet", "Güç"],
+      "lines": [
+        "Duruş",
+        "Zarafet",
+        "Güç"
+      ],
       "more": "Detaylı bilgi"
     },
     "ballroom": {
       "name": "Salon Dansları",
-      "lines": ["Ritim", "Özgüven", "Feminenlik"],
+      "lines": [
+        "Ritim",
+        "Özgüven",
+        "Feminenlik"
+      ],
       "more": "Detaylı bilgi"
     },
     "stretching": {
       "name": "Stretching",
-      "lines": ["Esneklik", "Rahatlık", "Beden farkındalığı"],
+      "lines": [
+        "Esneklik",
+        "Rahatlık",
+        "Beden farkındalığı"
+      ],
       "more": "Detaylı bilgi"
     }
   },
@@ -38,7 +51,12 @@
     "eyebrow": "Nasıl işliyor?",
     "title": "Online. Canlı.\nSana özel hissettiren\nküçük gruplar.",
     "more": "Detayları keşfet",
-    "steps": ["Dersini seç", "Takvimden saatini ayırt", "Bağlantını al", "Evinden derse katıl"]
+    "steps": [
+      "Dersini seç",
+      "Takvimden saatini ayırt",
+      "Bağlantını al",
+      "Evinden derse katıl"
+    ]
   },
   "teacher": {
     "eyebrow": "Öğretmeniniz",
@@ -81,18 +99,44 @@
       "title": "Programlar",
       "lead": "İhtiyacına ve hedeflerine uygun programını seç.",
       "body": "Fiyatlar ve paket isimleri yalnızca bu sayfada gösterilir; ana sayfada gösterilmez."
+    },
+    "contact": {
+      "title": "İletişim",
+      "lead": "Soruların mı var? Bize ulaş.",
+      "body": "Instagram, WhatsApp, e‑posta ve telefon bilgilerini buradan değiştirebilirsin."
+    },
+    "trial": {
+      "title": "Derslerine başla",
+      "lead": "İlk ders için formu doldur.",
+      "body": "Bu ilk prototipte form görsel olarak hazırlanıyor. Bir sonraki aşamada gerçek gönderim, e‑posta ve ödeme altyapısını bağlayabiliriz."
     }
   },
   "programList": [
-    { "name": "Klasik + Stretching", "details": "8 ders / ay", "price": "8.000 TL" },
-    { "name": "Salon Dansları + Stretching", "details": "8 ders / ay", "price": "8.000 TL" },
-    { "name": "The Full Experience", "details": "Klasik + Salon Dansları + Stretching", "price": "10.000 TL / ay" },
-    { "name": "Bireysel Ders", "details": "Özel ders", "price": "2.500 TL" }
+    {
+      "name": "Klasik + Stretching",
+      "details": "8 ders / ay",
+      "price": "8.000 TL"
+    },
+    {
+      "name": "Salon Dansları + Stretching",
+      "details": "8 ders / ay",
+      "price": "8.000 TL"
+    },
+    {
+      "name": "The Full Experience",
+      "details": "Klasik + Salon Dansları + Stretching",
+      "price": "10.000 TL / ay"
+    },
+    {
+      "name": "Bireysel Ders",
+      "details": "Özel ders",
+      "price": "2.500 TL"
+    }
   ],
   "appointment": {
     "eyebrow": "Ders Ayırt",
-    "title": "Bir tarih seçin, bir saat seçin, piste çıkın",
-    "intro": "Aşağıdan uygun bir tarih ve saat seçin, yerinizi ayırtın. Dersiniz eğitmenlerimizden biriyle canlı olarak Zoom üzerinden gerçekleşecek.",
+    "title": "Derslerine başla",
+    "intro": "İlk ders için formu doldur. Aşağıdan uygun bir tarih ve saat seçip yerinizi ayırtın — dersiniz eğitmenlerimizden biriyle canlı olarak Zoom üzerinden gerçekleşecek.",
     "steps": {
       "title": "Rezervasyon nasıl işliyor",
       "items": [
@@ -121,8 +165,8 @@
   },
   "contact": {
     "eyebrow": "İletişim",
-    "title": "Hadi dans edelim",
-    "text": "Şu anda bize ulaşmanın en hızlı yolu e-postadır. Telefon ve stüdyo adresi bilgileri yakında eklenecek.",
+    "title": "İletişim",
+    "text": "Soruların mı var? Bize ulaş. Şu anda bize ulaşmanın en hızlı yolu e-postadır — telefon ve stüdyo adresi bilgileri yakında eklenecek.",
     "emailLabel": "Bize e-posta gönderin",
     "email": "letsdance@partypas.com",
     "appointmentTitle": "Ya da doğrudan rezervasyona geçin",

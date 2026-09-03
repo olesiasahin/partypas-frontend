@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
+// Blog & FAQ — required by the original PartyPas brief; not part of the
+// design prototype, so it borrows the prototype's content-section /
+// program-card language rather than inventing a new one.
 export default function Blog() {
   const { t } = useTranslation();
   const posts = t("blog.posts", { returnObjects: true });
@@ -8,48 +11,39 @@ export default function Blog() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <>
-      <section className="section">
-        <div className="container">
-          <p className="eyebrow">{t("blog.eyebrow")}</p>
-          <h1>{t("blog.title")}</h1>
-          <p className="page-intro">{t("blog.intro")}</p>
-
-          <div className="post-grid">
-            {posts.map((post, i) => (
-              <article className="post-card card" key={i}>
-                <h3>{post.title}</h3>
-                <p>{post.excerpt}</p>
-                <span className="read-more">{t("blog.readMore")} →</span>
-              </article>
-            ))}
-          </div>
+    <div className="blog-page">
+      <section className="content-section" style={{ borderTop: "none" }}>
+        <div className="kicker">{t("blog.eyebrow")}</div>
+        <h1>{t("blog.title")}</h1>
+        <p>{t("blog.intro")}</p>
+        <div className="post-grid">
+          {posts.map((post) => (
+            <article className="post-card" key={post.title}>
+              <h3>{post.title}</h3>
+              <p>{post.excerpt}</p>
+              <span className="read-more">{t("blog.readMore")} →</span>
+            </article>
+          ))}
         </div>
       </section>
 
-      <section className="section section-alt" id="faq">
-        <div className="container">
-          <h2>{t("blog.faqTitle")}</h2>
-          <div className="faq-list">
-            {faq.map((item, i) => {
-              const isOpen = openIndex === i;
-              return (
-                <div className={`faq-item card ${isOpen ? "open" : ""}`} key={i}>
-                  <button
-                    className="faq-question"
-                    onClick={() => setOpenIndex(isOpen ? null : i)}
-                    aria-expanded={isOpen}
-                  >
-                    <span>{item.q}</span>
-                    <span className="faq-icon">{isOpen ? "–" : "+"}</span>
-                  </button>
-                  {isOpen && <p className="faq-answer">{item.a}</p>}
-                </div>
-              );
-            })}
-          </div>
+      <section className="content-section" id="faq">
+        <h2>{t("blog.faqTitle")}</h2>
+        <div className="faq-list">
+          {faq.map((item, i) => {
+            const isOpen = openIndex === i;
+            return (
+              <div className="faq-item" key={item.q}>
+                <button className="faq-question" onClick={() => setOpenIndex(isOpen ? null : i)} aria-expanded={isOpen}>
+                  <span>{item.q}</span>
+                  <span className="faq-icon">{isOpen ? "–" : "+"}</span>
+                </button>
+                {isOpen && <p className="faq-answer">{item.a}</p>}
+              </div>
+            );
+          })}
         </div>
       </section>
-    </>
+    </div>
   );
 }

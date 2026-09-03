@@ -8,6 +8,7 @@
     "classes": "Cours",
     "programs": "Programmes",
     "about": "À propos",
+    "how": "Comment ça marche",
     "blog": "Blog & FAQ",
     "contact": "Contact",
     "cta": "Commencer les cours"
@@ -20,17 +21,29 @@
   "disciplines": {
     "classical": {
       "name": "Classique",
-      "lines": ["Posture", "Élégance", "Force"],
+      "lines": [
+        "Posture",
+        "Élégance",
+        "Force"
+      ],
       "more": "En savoir plus"
     },
     "ballroom": {
       "name": "Danses de salon",
-      "lines": ["Rythme", "Confiance", "Féminité"],
+      "lines": [
+        "Rythme",
+        "Confiance",
+        "Féminité"
+      ],
       "more": "En savoir plus"
     },
     "stretching": {
       "name": "Stretching",
-      "lines": ["Souplesse", "Aisance", "Conscience du corps"],
+      "lines": [
+        "Souplesse",
+        "Aisance",
+        "Conscience du corps"
+      ],
       "more": "En savoir plus"
     }
   },
@@ -38,7 +51,12 @@
     "eyebrow": "Comment ça marche",
     "title": "En ligne. En direct.\nPetits groupes,\nattention personnelle.",
     "more": "Découvrir",
-    "steps": ["Choisir le cours", "Choisir l’heure", "Recevoir le lien", "Participer de chez soi"]
+    "steps": [
+      "Choisir le cours",
+      "Choisir l’heure",
+      "Recevoir le lien",
+      "Participer de chez soi"
+    ]
   },
   "teacher": {
     "eyebrow": "Votre professeure",
@@ -81,18 +99,44 @@
       "title": "Programmes",
       "lead": "Choisissez le programme adapté à vos objectifs.",
       "body": "Les noms des forfaits et les prix apparaissent uniquement ici."
+    },
+    "contact": {
+      "title": "Contact",
+      "lead": "Une question ? Écrivez-nous.",
+      "body": "Instagram, WhatsApp, e-mail et téléphone sont modifiables."
+    },
+    "trial": {
+      "title": "Commencer les cours",
+      "lead": "Remplissez le formulaire pour votre premier cours.",
+      "body": "Le prototype contient la structure visuelle du formulaire. Les envois et paiements seront connectés ensuite."
     }
   },
   "programList": [
-    { "name": "Classique + Stretching", "details": "8 cours / mois", "price": "8 000 TL" },
-    { "name": "Danses de salon + Stretching", "details": "8 cours / mois", "price": "8 000 TL" },
-    { "name": "The Full Experience", "details": "Classique + Danses de salon + Stretching", "price": "10 000 TL / mois" },
-    { "name": "Cours privé", "details": "1 cours", "price": "2 500 TL" }
+    {
+      "name": "Classique + Stretching",
+      "details": "8 cours / mois",
+      "price": "8 000 TL"
+    },
+    {
+      "name": "Danses de salon + Stretching",
+      "details": "8 cours / mois",
+      "price": "8 000 TL"
+    },
+    {
+      "name": "The Full Experience",
+      "details": "Classique + Danses de salon + Stretching",
+      "price": "10 000 TL / mois"
+    },
+    {
+      "name": "Cours privé",
+      "details": "1 cours",
+      "price": "2 500 TL"
+    }
   ],
   "appointment": {
     "eyebrow": "Réserver un cours",
-    "title": "Choisissez une date, choisissez une heure, entrez en piste",
-    "intro": "Choisissez ci-dessous une date et un horaire disponibles pour réserver votre place. Votre cours se déroulera en direct sur Zoom avec l'un de nos instructeurs.",
+    "title": "Commencer les cours",
+    "intro": "Remplissez le formulaire pour votre premier cours. Choisissez ci-dessous une date et un horaire disponibles pour réserver votre place — votre cours se déroulera en direct sur Zoom avec l'un de nos instructeurs.",
     "steps": {
       "title": "Comment fonctionne la réservation",
       "items": [
@@ -121,8 +165,8 @@
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Dansons ensemble",
-    "text": "Le moyen le plus rapide de nous joindre pour l'instant est l'e-mail. Le numéro de téléphone et l'adresse du studio seront ajoutés prochainement.",
+    "title": "Contact",
+    "text": "Une question ? Écrivez-nous. Le moyen le plus rapide de nous joindre pour l'instant est l'e-mail — le numéro de téléphone et l'adresse du studio seront ajoutés prochainement.",
     "emailLabel": "Écrivez-nous",
     "email": "letsdance@partypas.com",
     "appointmentTitle": "Ou passez directement à la réservation",
