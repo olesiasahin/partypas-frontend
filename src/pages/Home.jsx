@@ -3,20 +3,22 @@ import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { IMAGES, LOGOS } from "../siteConfig";
 import withBreaks from "../utils/withBreaks";
+import { usePageHref } from "../pageLinks";
 
 // Mirrors the prototype's home(): hero → three discipline rows (copy |
 // photo | editorial photo) → how (intro | steps | photo) → teacher
 // (photo | copy | watermark).
 const DISCIPLINES = [
-  { key: "classical", to: "/classical", img: IMAGES.classical },
-  { key: "ballroom", to: "/ballroom", img: IMAGES.ballroom },
-  { key: "stretching", to: "/stretching", img: IMAGES.stretching },
+  { key: "classical", page: "klasik", img: IMAGES.classical },
+  { key: "ballroom", page: "salon", img: IMAGES.ballroom },
+  { key: "stretching", page: "stretching", img: IMAGES.stretching },
 ];
 
 export default function Home() {
   const { t } = useTranslation();
   const location = useLocation();
   const steps = t("how.steps", { returnObjects: true });
+  const href = usePageHref();
 
   // Header "Classes" / "How it works" arrive here as /#classes, /#how.
   useEffect(() => {
@@ -33,7 +35,7 @@ export default function Home() {
           <div className="kicker">01</div>
           <h1>{withBreaks(t("hero.title"))}</h1>
           <div className="hero-sub">{withBreaks(t("hero.subtitle"))}</div>
-          <Link className="text-link" to="/book">
+          <Link className="text-link" to={href("trial")}>
             {t("hero.cta")} →
           </Link>
         </div>
@@ -53,7 +55,7 @@ export default function Home() {
                 <div className="num">0{i + 1}</div>
                 <h2>{name}</h2>
                 <p>{withBreaks(lines.join("\n"))}</p>
-                <Link className="text-link" to={d.to} style={{ marginTop: 26 }}>
+                <Link className="text-link" to={href(d.page)} style={{ marginTop: 26 }}>
                   {t(`disciplines.${d.key}.more`)} →
                 </Link>
               </div>
@@ -72,7 +74,7 @@ export default function Home() {
         <div className="how-intro">
           <div className="kicker">{t("how.eyebrow")}</div>
           <h2>{withBreaks(t("how.title"))}</h2>
-          <Link className="text-link" to="/why-online">
+          <Link className="text-link" to={href("neden-online")}>
             {t("how.more")} →
           </Link>
         </div>
@@ -97,7 +99,7 @@ export default function Home() {
           <div className="kicker">{t("teacher.eyebrow")}</div>
           <h2>{withBreaks(t("teacher.title"))}</h2>
           <p>{t("teacher.text")}</p>
-          <Link className="text-link" to="/about">
+          <Link className="text-link" to={href("hakkimda")}>
             {t("teacher.more")} →
           </Link>
         </div>

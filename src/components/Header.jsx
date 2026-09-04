@@ -1,66 +1,54 @@
 import { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { LOGOS } from "../siteConfig";
+import { usePageHref } from "../pageLinks";
 
-// Markup mirrors the prototype's header() exactly:
-// <header.site-header> <a.brand><img></a> <nav.nav>…</nav>
-// <div.header-actions><select.lang-select/><a.cta.header-cta/></div>
-//
-// "Classes" and "How it works" are anchors on the Home page (not routes);
-// from another page they navigate home first, then scroll.
-function AnchorLink({ hash, onClick, children }) {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const handleClick = (e) => {
-    onClick?.();
-    if (location.pathname === "/") {
-      e.preventDefault();
-      document.getElementById(hash)?.scrollIntoView({ behavior: "smooth", block: "start" });
-    } else {
-      e.preventDefault();
-      navigate(`/#${hash}`);
-    }
-  };
-  return (
-    <a href={`/#${hash}`} onClick={handleClick}>
-      {children}
-    </a>
-  );
-}
-
+// Markup and links mirror the design's header. Below 900px the nav
+// collapses behind a menu button (the design only hid it there).
 export default function Header() {
   const { t } = useTranslation();
+  const href = usePageHref();
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
 
   return (
     <header className="site-header">
-      <Link className="brand" to="/" onClick={close}>
-        <img src={LOGOS.dark} alt="PartyPas" />
-      </Link>
-
-      <nav className={`nav${open ? " open" : ""}`}>
-        <Link to="/" onClick={close}>{t("nav.home")}</Link>
-        <AnchorLink hash="classes" onClick={close}>{t("nav.classes")}</AnchorLink>
-        <Link to="/programs" onClick={close}>{t("nav.programs")}</Link>
-        <Link to="/about" onClick={close}>{t("nav.about")}</Link>
-        <AnchorLink hash="how" onClick={close}>{t("nav.how")}</AnchorLink>
-        <Link to="/contact" onClick={close}>{t("nav.contact")}</Link>
-      </nav>
-
-      <div className="header-actions">
-        <LanguageSwitcher />
-        <Link className="cta header-cta" to="/book" onClick={close}>
-          {t("nav.cta")} →
+      <div className="shell header-grid">
+        <Link className="brand" to={href("home")}>
+          <img src={LOGOS.dark} alt="PartyPas" />
         </Link>
-        {/* React addition — the prototype has no mobile menu at all */}
-        <button className="nav-toggle" aria-label="Toggle navigation" onClick={() => setOpen((o) => !o)}>
-          <span />
-          <span />
-          <span />
-        </button>
+
+        <nav className={`nav${open ? " open" : ""}`} onClick={close}>
+          <Link to={href("home")}>{t("nav.home")}</Link>
+          <Link to={href("home", "classes")}>{t("nav.classes")}</Link>
+          <Link to={href("programlar")}>{t("nav.programs")}</Link>
+          <Link to={href("hakkimda")}>{t("nav.about")}</Link>
+          <Link to={href("home", "how")}>{t("nav.how")}</Link>
+          <Link to={href("iletisim")}>{t("nav.contact")}</Link>
+          <Link className="cta nav-cta-mobile" to={href("trial")}>
+            {t("nav.cta")} →
+          </Link>
+        </nav>
+
+        <div className="header-actions">
+          <LanguageSwitcher />
+          <Link className="cta header-cta" to={href("trial")}>
+            {t("nav.cta")} →
+          </Link>
+          <button
+            type="button"
+            className="nav-toggle"
+            aria-label="Menu"
+            aria-expanded={open}
+            onClick={() => setOpen((o) => !o)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
       </div>
     </header>
   );

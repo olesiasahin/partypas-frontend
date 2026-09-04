@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { CONTACT, LOGOS } from "../siteConfig";
+import { usePageHref } from "../pageLinks";
 
 // Mirrors the prototype's footer(): four cells — logo | trial pitch |
 // contact links | CTA button. Contact lines render only when set in
@@ -8,16 +9,18 @@ import { CONTACT, LOGOS } from "../siteConfig";
 export default function Footer() {
   const { t } = useTranslation();
   const c = CONTACT;
+  const href = usePageHref();
 
   return (
     <footer className="site-footer">
+      <div className="shell footer-grid">
       <div className="footer-cell">
         <img className="footer-logo" src={LOGOS.dark} alt="PartyPas" />
       </div>
       <div className="footer-cell">
         <div className="footer-title">{t("footerCta.title")}</div>
         <p>{t("footerCta.text")}</p>
-        <Link to="/book">{t("footerCta.button")} →</Link>
+        <Link to={href("trial")}>{t("footerCta.button")} →</Link>
       </div>
       <div className="footer-cell footer-contact">
         {c.phone && <a href={`tel:${c.phone.replace(/\s/g, "")}`}>{c.phone}</a>}
@@ -29,9 +32,10 @@ export default function Footer() {
         <a href={`mailto:${c.email}`}>{c.email}</a>
       </div>
       <div className="footer-cell">
-        <Link className="cta" to="/book">
+        <Link className="cta" to={href("trial")}>
           {t("footerCta.button")} →
         </Link>
+      </div>
       </div>
     </footer>
   );

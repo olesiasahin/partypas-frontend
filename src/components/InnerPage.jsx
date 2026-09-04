@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { usePageHref } from "../pageLinks";
 
 /**
  * Mirrors the prototype's inner() template: an inner-hero (kicker, h1,
@@ -10,6 +11,7 @@ import { useTranslation } from "react-i18next";
  */
 export default function InnerPage({ page, image, children }) {
   const { t } = useTranslation();
+  const href = usePageHref();
   return (
     <>
       <section className="inner-hero">
@@ -17,7 +19,7 @@ export default function InnerPage({ page, image, children }) {
           <div className="kicker">PARTYPAS</div>
           <h1>{page.title}</h1>
           <p>{page.lead}</p>
-          <Link className="cta" to="/book">
+          <Link className="cta" to={href("trial")}>
             {t("nav.cta")} →
           </Link>
         </div>

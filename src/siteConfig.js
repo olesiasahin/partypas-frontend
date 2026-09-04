@@ -1,15 +1,17 @@
 // Site-wide, non-translated settings — the React counterpart of the
 // prototype's `settings` block in content.js. Edit here first.
 //
-// Contact: per the PartyPas spec only the email is public for now. Fill in
-// `phone` / `instagram` / `whatsapp` when they're ready and the footer and
-// Contact page will show them automatically (they render only when set).
+// Contact — values copied verbatim from the prototype's content.js
+// (settings.contact) so the footer and Contact page match it exactly.
+// The phone / Instagram / WhatsApp values are the prototype's placeholders:
+// replace them with the real ones here (one place) whenever ready; setting
+// one to "" hides that line/card.
 export const CONTACT = {
-  phone: "", // e.g. "+90 5xx xxx xx xx"
-  instagram: "", // e.g. "@partypas.dance"
-  instagramUrl: "", // e.g. "https://instagram.com/partypas.dance"
-  email: "letsdance@partypas.com",
-  whatsapp: "", // e.g. "https://wa.me/905xxxxxxxxx"
+  phone: "+90 534 123 45 67",
+  instagram: "@partypas.dance",
+  instagramUrl: "https://instagram.com",
+  email: "info@partypas.com",
+  whatsapp: "https://wa.me/905341234567",
 };
 
 export const IMAGES = {

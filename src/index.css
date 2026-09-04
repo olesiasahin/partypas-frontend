@@ -20,19 +20,35 @@ main.page {
 }
 
 /* ---------- Header ---------- */
+/* The design is a 1440px composition. `.shell` centres it on wider screens
+   (zoomed-out / large monitors) so photos keep their proportions instead of
+   stretching; header/footer backgrounds stay full-bleed. */
+.shell {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+main.page {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .site-header {
   position: sticky;
   top: 0;
   z-index: 20;
+  background: linear-gradient(rgba(54, 23, 28, 0.98), rgba(54, 23, 28, 0.98)),
+    url("/images/burgundy-texture.jpg") center/cover;
+  color: #f5e7d0;
+  border-bottom: 1px solid rgba(200, 155, 76, 0.3);
+}
+.header-grid {
+  position: relative;
   min-height: 88px;
   padding: 14px clamp(22px, 4vw, 64px);
   display: grid;
   grid-template-columns: 230px 1fr auto;
   align-items: center;
-  background: linear-gradient(rgba(54, 23, 28, 0.98), rgba(54, 23, 28, 0.98)),
-    url("/images/burgundy-texture.jpg") center/cover;
-  color: #f5e7d0;
-  border-bottom: 1px solid rgba(200, 155, 76, 0.3);
 }
 .brand img {
   width: 190px;
@@ -86,24 +102,6 @@ main.page {
 }
 .page {
   overflow: hidden;
-}
-
-/* React addition: hamburger for the mobile nav (the prototype simply
-   hides the nav below 900px). Invisible on desktop. */
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 6px;
-}
-.nav-toggle span {
-  width: 22px;
-  height: 2px;
-  background: #f5e7d0;
-  display: block;
 }
 
 /* ---------- Hero ---------- */
@@ -166,11 +164,6 @@ main.page {
   object-fit: cover;
   object-position: center 40%;
 }
-/* NOTE: kept verbatim from the prototype — there `.hero-image img`
-   (higher specificity) overrides this width, so the seal renders as a
-   large photo-sized watermark, exactly as the approved prototype shows.
-   To get a small 104px corner seal instead, change the selector to
-   `.hero-image img.hero-seal` and add `height:auto; object-fit:contain`. */
 .hero-seal {
   position: absolute;
   right: 7%;
@@ -347,10 +340,12 @@ main.page {
   background: linear-gradient(rgba(54, 23, 28, 0.98), rgba(54, 23, 28, 0.98)),
     url("/images/burgundy-texture.jpg") center/cover;
   color: #efe0c8;
+  border-top: 1px solid rgba(200, 155, 76, 0.35);
+}
+.footer-grid {
   display: grid;
   grid-template-columns: 28% 22% 28% 22%;
   min-height: 210px;
-  border-top: 1px solid rgba(200, 155, 76, 0.35);
 }
 .footer-cell {
   padding: 32px 38px;
@@ -515,8 +510,32 @@ main.page {
 }
 
 /* ---------- Mobile ---------- */
+/* Mobile menu button — hidden on desktop, shown below 900px */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  margin: 0 auto;
+  background: #f5e7d0;
+}
+.nav-cta-mobile {
+  display: none;
+}
+
 @media (max-width: 900px) {
-  .site-header {
+  .header-grid {
     grid-template-columns: 1fr auto;
     min-height: 72px;
   }
@@ -526,13 +545,6 @@ main.page {
   .nav {
     display: none;
   }
-  .header-cta {
-    display: none;
-  }
-  /* React addition: hamburger reveals the nav as a dropdown panel */
-  .nav-toggle {
-    display: flex;
-  }
   .nav.open {
     display: flex;
     position: absolute;
@@ -540,11 +552,24 @@ main.page {
     left: 0;
     right: 0;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-    padding: 20px 24px;
-    background: var(--burgundy);
+    justify-content: flex-start;
+    gap: 22px;
+    padding: 26px clamp(22px, 4vw, 64px) 30px;
+    background: linear-gradient(rgba(54, 23, 28, 0.98), rgba(54, 23, 28, 0.98)),
+      url("/images/burgundy-texture.jpg") center/cover;
     border-bottom: 1px solid rgba(200, 155, 76, 0.3);
+    font-size: 12px;
+  }
+  .nav.open .nav-cta-mobile {
+    display: inline-flex;
+    margin-top: 6px;
+    color: #e9c780;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+  .header-cta {
+    display: none;
   }
   .hero,
   .discipline,
@@ -588,7 +613,7 @@ main.page {
   .teacher-mark {
     display: none;
   }
-  .site-footer {
+  .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
   .footer-cell {
@@ -604,5 +629,70 @@ main.page {
   .contact-grid,
   .post-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero h1 {
+    font-size: clamp(44px, 15vw, 64px);
+  }
+  .hero-sub {
+    font-size: 22px;
+  }
+  .hero-copy {
+    padding: 52px 22px 40px;
+  }
+  .hero-image {
+    min-height: 420px;
+  }
+  .discipline-img,
+  .editorial-img {
+    min-height: 300px;
+  }
+  .editorial-img {
+    display: none;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  .step {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+  .how-intro,
+  .teacher-copy {
+    padding: 40px 22px;
+  }
+  .teacher-copy h2 {
+    font-size: 36px;
+  }
+  .inner-copy {
+    padding: 52px 22px;
+  }
+  .inner-copy h1 {
+    font-size: clamp(40px, 13vw, 58px);
+  }
+  .inner-copy p {
+    font-size: 20px;
+  }
+  .inner-image {
+    min-height: 380px;
+  }
+  .content-section {
+    padding: 56px 22px;
+  }
+  .content-section h2 {
+    font-size: 36px;
+  }
+  .program-card {
+    padding: 28px 22px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-cell {
+    border-right: 0;
+    padding: 26px 22px;
   }
 }

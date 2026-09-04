@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useSearchParams, Navigate } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -9,6 +9,40 @@ import About from "./pages/About";
 import Appointment from "./pages/Appointment";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
+import { IMAGES } from "./siteConfig";
+
+// Same routing as the design prototype: /?page=<key>&lang=<xx>
+const PAGES = {
+  home: <Home />,
+  klasik: <ClassPage discKey="classical" image={IMAGES.classical} />,
+  salon: <ClassPage discKey="ballroom" image={IMAGES.ballroom} />,
+  stretching: <ClassPage discKey="stretching" image={IMAGES.stretching} />,
+  "neden-online": <WhyOnline />,
+  programlar: <Programs />,
+  hakkimda: <About />,
+  iletisim: <Contact />,
+  trial: <Appointment />,
+  blog: <Blog />,
+};
+
+function QueryPage() {
+  const [params] = useSearchParams();
+  const page = params.get("page") || "home";
+  return PAGES[page] || PAGES.home;
+}
+
+// Old path URLs keep working by redirecting to the ?page= form.
+const ALIASES = {
+  "/classical": "klasik",
+  "/ballroom": "salon",
+  "/stretching": "stretching",
+  "/why-online": "neden-online",
+  "/programs": "programlar",
+  "/about": "hakkimda",
+  "/contact": "iletisim",
+  "/book": "trial",
+  "/blog": "blog",
+};
 
 export default function App() {
   return (
@@ -16,16 +50,11 @@ export default function App() {
       <Header />
       <main className="page">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/classical" element={<ClassPage discKey="classical" image="/images/classical.jpg" />} />
-          <Route path="/ballroom" element={<ClassPage discKey="ballroom" image="/images/ballroom.jpg" />} />
-          <Route path="/stretching" element={<ClassPage discKey="stretching" image="/images/stretching.jpg" />} />
-          <Route path="/why-online" element={<WhyOnline />} />
-          <Route path="/programs" element={<Programs />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/book" element={<Appointment />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/" element={<QueryPage />} />
+          {Object.entries(ALIASES).map(([path, page]) => (
+            <Route key={path} path={path} element={<Navigate to={`/?page=${page}`} replace />} />
+          ))}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
       <Footer />

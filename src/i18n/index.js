@@ -34,7 +34,18 @@ function readCloudflareLangCookie() {
   return match ? decodeURIComponent(match[1]) : null;
 }
 
+// ?lang= in the URL wins (same as the design prototype), then the
+// Cloudflare cookie, then the stored/browser preference.
+function readUrlLang() {
+  if (typeof window === "undefined") return null;
+  const raw = new URLSearchParams(window.location.search).get("lang");
+  if (!raw) return null;
+  return raw === "ua" ? "uk" : raw;
+}
+
+const urlLang = readUrlLang();
 const cfLang = readCloudflareLangCookie();
+const isSupported = (c) => c && SUPPORTED_LANGUAGES.some((l) => l.code === c);
 
 i18n
   .use(LanguageDetector)
@@ -43,7 +54,7 @@ i18n
     resources,
     fallbackLng: "tr",
     supportedLngs: SUPPORTED_LANGUAGES.map((l) => l.code),
-    lng: cfLang && SUPPORTED_LANGUAGES.some((l) => l.code === cfLang) ? cfLang : undefined,
+    lng: isSupported(urlLang) ? urlLang : isSupported(cfLang) ? cfLang : undefined,
     interpolation: { escapeValue: false },
     detection: {
       // localStorage remembers an explicit user choice across visits;
