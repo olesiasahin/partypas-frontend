@@ -1,0 +1,48 @@
+{
+  "blog": {
+    "eyebrow": "Blog & FAQ",
+    "title": "Stories, tips & answers",
+    "intro": "Dance tips, studio news, and the questions we hear most.",
+    "readMore": "Read more",
+    "faqTitle": "Frequently asked questions",
+    "posts": [
+      {
+        "title": "5 tips for your first Ballroom lesson",
+        "excerpt": "New to Ballroom? Here's how to walk in feeling confident, not overwhelmed.",
+        "body": ""
+      },
+      {
+        "title": "Why Stretching belongs in every dancer's week",
+        "excerpt": "Flexibility and body awareness aren't extras — they're what make every style feel easier.",
+        "body": ""
+      },
+      {
+        "title": "Classical basics: what strong posture really trains",
+        "excerpt": "The first thing every dancer learns is doing more than you think.",
+        "body": ""
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do I need a partner to join?",
+        "a": "Not at all. Many of our classes are designed for solo learners, and partner work is practiced with instructors or fellow students during class."
+      },
+      {
+        "q": "What do I need for a Zoom class?",
+        "a": "A laptop, tablet or phone with a camera, a stable internet connection, and a bit of open floor space at home."
+      },
+      {
+        "q": "How do I pay for a class?",
+        "a": "After you book a slot, our team will reach out to arrange payment manually — we don't process payments on the website yet."
+      },
+      {
+        "q": "Can I switch between classes?",
+        "a": "Absolutely — many students combine Classical, Ballroom and Stretching to build a well-rounded practice."
+      },
+      {
+        "q": "What if I need to reschedule?",
+        "a": "Just email us at letsdance@partypas.com and we'll help you find a new slot."
+      }
+    ]
+  }
+}

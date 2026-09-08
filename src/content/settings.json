@@ -1,0 +1,22 @@
+{
+  "contact": {
+    "phone": "+90 553 047 57 40",
+    "instagram": "@party_pas",
+    "instagramUrl": "https://instagram.com/party_pas",
+    "email": "letsdance@partypas.com",
+    "whatsapp": "https://wa.me/905530475740"
+  },
+  "images": {
+    "hero": "/images/hero.jpg",
+    "classical": "/images/classical.jpg",
+    "ballroom": "/images/ballroom.jpg",
+    "stretching": "/images/stretching.jpg",
+    "editorial": "/images/editorial.jpg",
+    "online": "/images/online.jpg",
+    "teacher": "/images/teacher.jpg"
+  },
+  "logos": {
+    "dark": "/logo-gold.png",
+    "light": "/logo-burgundy.png"
+  }
+}

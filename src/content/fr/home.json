@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "title": "UN PAS\nVERS\nSOI.",
+    "subtitle": "Danser, c’est du temps\nque vous choisissez\nde vous offrir.",
+    "cta": "Commencer les cours"
+  },
+  "disciplines": {
+    "classical": {
+      "name": "Classique",
+      "lines": [
+        "Posture",
+        "Élégance",
+        "Force"
+      ],
+      "more": "En savoir plus"
+    },
+    "ballroom": {
+      "name": "Danses de salon",
+      "lines": [
+        "Rythme",
+        "Confiance",
+        "Féminité"
+      ],
+      "more": "En savoir plus"
+    },
+    "stretching": {
+      "name": "Stretching",
+      "lines": [
+        "Souplesse",
+        "Aisance",
+        "Conscience du corps"
+      ],
+      "more": "En savoir plus"
+    }
+  },
+  "how": {
+    "eyebrow": "Comment ça marche",
+    "title": "En ligne. En direct.\nPetits groupes,\nattention personnelle.",
+    "more": "Découvrir",
+    "steps": [
+      "Choisir le cours",
+      "Choisir l’heure",
+      "Recevoir le lien",
+      "Participer de chez soi"
+    ]
+  },
+  "teacher": {
+    "eyebrow": "Votre professeure",
+    "title": "La danse est\nune façon\nde vivre.",
+    "text": "Mon expérience de la scène, du studio et de l’enseignement accompagne les femmes vers plus de technique, de confiance et de liberté.",
+    "more": "Plus"
+  },
+  "footerCta": {
+    "title": "Commencez vos cours.",
+    "text": "Remplissez le formulaire et choisissons ensemble votre premier pas.",
+    "button": "Commencer"
+  }
+}

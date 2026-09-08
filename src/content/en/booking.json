@@ -1,0 +1,32 @@
+{
+  "appointment": {
+    "eyebrow": "Book a Class",
+    "title": "Start your classes",
+    "intro": "Complete the form for your first class. Choose an available date and time below and reserve your spot — your class will take place live over Zoom with one of our instructors.",
+    "steps": {
+      "title": "How booking works",
+      "items": [
+        {
+          "title": "1. Choose your style & time",
+          "text": "Browse open dates and hours and pick the slot that fits your schedule."
+        },
+        {
+          "title": "2. Confirm your booking",
+          "text": "You'll receive a Zoom link and class details by email once your slot is confirmed."
+        },
+        {
+          "title": "3. Pay directly with us",
+          "text": "Payment for your class is arranged manually with our team after booking — no online payment needed yet."
+        },
+        {
+          "title": "4. Show up & dance",
+          "text": "Join the Zoom link at your booked time and start moving."
+        }
+      ]
+    },
+    "widgetTitle": "Available dates & hours",
+    "widgetPlaceholder": "Our live Zoom scheduling calendar will be embedded here. In the meantime, choose a slot and we'll confirm by email.",
+    "paymentNote": "Payment is currently handled manually with our team after your booking is confirmed — no payment is collected on this website.",
+    "cta": "Reserve on Zoom"
+  }
+}

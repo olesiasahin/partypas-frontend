@@ -1,0 +1,44 @@
+{
+  "pages": {
+    "classical": {
+      "title": "Classique",
+      "lead": "Cours en ligne pour la posture, la technique, l’élégance et la force.",
+      "body": "Tous les textes, photos et boutons seront modifiables séparément."
+    },
+    "ballroom": {
+      "title": "Danses de salon",
+      "lead": "Rythme, coordination, confiance et expression.",
+      "body": "Des cours en ligne sans partenaire, des bases au mouvement fluide."
+    },
+    "stretching": {
+      "title": "Stretching",
+      "lead": "Souplesse, aisance et conscience du corps.",
+      "body": "Cours en direct centrés sur la mobilité contrôlée et la liberté du mouvement."
+    },
+    "whyOnline": {
+      "title": "Pourquoi en ligne ?",
+      "lead": "La danse s’adapte à votre vie.",
+      "body": "Pas de trajet. Participez de chez vous ou en voyage. En petit groupe, la professeure vous voit et corrige votre technique."
+    },
+    "about": {
+      "title": "À propos",
+      "lead": "PartyPas rend la danse élégante et accessible au quotidien.",
+      "body": "L’histoire de la marque, la bio et les photos seront modifiables."
+    },
+    "programs": {
+      "title": "Programmes",
+      "lead": "Choisissez le programme adapté à vos objectifs.",
+      "body": "Les noms des forfaits et les prix apparaissent uniquement ici."
+    },
+    "contact": {
+      "title": "Contact",
+      "lead": "Une question ? Écrivez-nous.",
+      "body": "Instagram, WhatsApp, e-mail et téléphone sont modifiables."
+    },
+    "trial": {
+      "title": "Commencer les cours",
+      "lead": "Remplissez le formulaire pour votre premier cours.",
+      "body": "Le prototype contient la structure visuelle du formulaire. Les envois et paiements seront connectés ensuite."
+    }
+  }
+}

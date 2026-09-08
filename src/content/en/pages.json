@@ -1,0 +1,44 @@
+{
+  "pages": {
+    "classical": {
+      "title": "Classical",
+      "lead": "Live online classical training for posture, technique, elegance and strength.",
+      "body": "Every text, image and button on this page is designed to be independently editable later."
+    },
+    "ballroom": {
+      "title": "Ballroom Dance",
+      "lead": "Rhythm, coordination, confidence and expression.",
+      "body": "Partner-free online ballroom classes, from foundations to fluid movement."
+    },
+    "stretching": {
+      "title": "Stretching",
+      "lead": "Flexibility, ease and body awareness.",
+      "body": "Live online stretching focused on controlled mobility and freer movement."
+    },
+    "whyOnline": {
+      "title": "Why Online?",
+      "lead": "Dance fits your life.",
+      "body": "No commute. Join from home or while travelling. In small live groups the teacher sees you, guides you and corrects your technique."
+    },
+    "about": {
+      "title": "About",
+      "lead": "PartyPas makes dance an elegant, accessible part of everyday life.",
+      "body": "Brand story, teacher bio and photos will all be editable."
+    },
+    "programs": {
+      "title": "Programs",
+      "lead": "Choose a program that suits your goals.",
+      "body": "Package names and prices live only on this page, not on the homepage."
+    },
+    "contact": {
+      "title": "Contact",
+      "lead": "Questions? Get in touch.",
+      "body": "Instagram, WhatsApp, email and phone details can be changed here."
+    },
+    "trial": {
+      "title": "Start your classes",
+      "lead": "Complete the form for your first class.",
+      "body": "The first prototype contains the visual form structure. Real submissions and payments can be connected next."
+    }
+  }
+}

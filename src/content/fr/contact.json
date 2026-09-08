@@ -1,0 +1,12 @@
+{
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Contact",
+    "text": "Une question ? Écrivez-nous. Le moyen le plus rapide de nous joindre pour l'instant est l'e-mail — le numéro de téléphone et l'adresse du studio seront ajoutés prochainement.",
+    "emailLabel": "Écrivez-nous",
+    "email": "letsdance@partypas.com",
+    "appointmentTitle": "Ou passez directement à la réservation",
+    "appointmentText": "Vous préférez réserver tout de suite ? Consultez nos dates et horaires disponibles ci-dessous.",
+    "appointmentCta": "Réserver un cours"
+  }
+}

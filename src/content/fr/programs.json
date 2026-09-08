@@ -1,0 +1,24 @@
+{
+  "programList": [
+    {
+      "name": "Classique + Stretching",
+      "details": "8 cours / mois",
+      "price": "8 000 TL"
+    },
+    {
+      "name": "Danses de salon + Stretching",
+      "details": "8 cours / mois",
+      "price": "8 000 TL"
+    },
+    {
+      "name": "The Full Experience",
+      "details": "Classique + Danses de salon + Stretching",
+      "price": "10 000 TL / mois"
+    },
+    {
+      "name": "Cours privé",
+      "details": "1 cours",
+      "price": "2 500 TL"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "brand": {
+    "name": "PartyPas",
+    "tagline": "Hareket Et. Gülümse. Tekrar Et."
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "classes": "Dersler",
+    "programs": "Programlar",
+    "about": "Hakkımızda",
+    "how": "Nasıl İşliyor?",
+    "blog": "Blog & SSS",
+    "contact": "İletişim",
+    "cta": "Derslerine başla"
+  },
+  "footer": {
+    "tagline": "Hareket Et. Gülümse. Tekrar Et.",
+    "rights": "Tüm hakları saklıdır.",
+    "languages": "Dil"
+  }
+}

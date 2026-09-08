@@ -474,6 +474,25 @@ main.page {
   border-bottom: 1px solid var(--ink);
   padding-bottom: 5px;
 }
+/* React addition: a post with a body renders "Read more" as a <button>
+   so it can expand in place. These resets make the button render exactly
+   like the <span> version above (UA button styles don't inherit). */
+button.read-more {
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--ink);
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  cursor: pointer;
+  padding: 0 0 5px;
+}
+.post-body {
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0 0 22px;
+  color: #4d4540;
+}
 .faq-list {
   display: grid;
   gap: 0;

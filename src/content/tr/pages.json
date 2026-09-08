@@ -1,0 +1,44 @@
+{
+  "pages": {
+    "classical": {
+      "title": "Klasik",
+      "lead": "Duruş, teknik, zarafet ve güçlü bir beden için canlı online klasik dersleri.",
+      "body": "Bu sayfadaki tüm metinleri, fotoğrafları ve düğmeleri daha sonra admin panelinden bağımsız olarak değiştirebileceksin."
+    },
+    "ballroom": {
+      "title": "Salon Dansları",
+      "lead": "Ritim, koordinasyon, özgüven ve ifade.",
+      "body": "Partner gerektirmeyen online salon dansları dersleri; temel teknikten akıcı harekete kadar ilerleyen yapı."
+    },
+    "stretching": {
+      "title": "Stretching",
+      "lead": "Esneklik, rahatlık ve beden farkındalığı.",
+      "body": "Canlı online stretching dersleri; kontrollü esneme, mobilite ve daha özgür hareket için."
+    },
+    "whyOnline": {
+      "title": "Neden Online?",
+      "lead": "Dans hayatına uyum sağlar.",
+      "body": "Trafik ve yol yok; evinden veya seyahatteyken katıl. Küçük canlı gruplarda öğretmen seni görür, yönlendirir ve tekniğini düzeltir."
+    },
+    "about": {
+      "title": "Hakkımızda",
+      "lead": "PartyPas, dansı günlük hayatın içinde ulaşılabilir ve estetik bir deneyime dönüştürür.",
+      "body": "Bu sayfadaki marka hikâyesi, öğretmen biyografisi ve fotoğraflar tamamen düzenlenebilir olacak."
+    },
+    "programs": {
+      "title": "Programlar",
+      "lead": "İhtiyacına ve hedeflerine uygun programını seç.",
+      "body": "Fiyatlar ve paket isimleri yalnızca bu sayfada gösterilir; ana sayfada gösterilmez."
+    },
+    "contact": {
+      "title": "İletişim",
+      "lead": "Soruların mı var? Bize ulaş.",
+      "body": "Instagram, WhatsApp, e‑posta ve telefon bilgilerini buradan değiştirebilirsin."
+    },
+    "trial": {
+      "title": "Derslerine başla",
+      "lead": "İlk ders için formu doldur.",
+      "body": "Bu ilk prototipte form görsel olarak hazırlanıyor. Bir sonraki aşamada gerçek gönderim, e‑posta ve ödeme altyapısını bağlayabiliriz."
+    }
+  }
+}

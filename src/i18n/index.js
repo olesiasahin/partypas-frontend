@@ -2,11 +2,6 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
-import en from "./locales/en.json";
-import tr from "./locales/tr.json";
-import uk from "./locales/uk.json";
-import ru from "./locales/ru.json";
-import fr from "./locales/fr.json";
 
 export const SUPPORTED_LANGUAGES = [
   { code: "tr", label: "Türkçe", chip: "TR" },
@@ -16,13 +11,20 @@ export const SUPPORTED_LANGUAGES = [
   { code: "fr", label: "Français", chip: "FR" },
 ];
 
-const resources = {
-  en: { translation: en },
-  tr: { translation: tr },
-  uk: { translation: uk },
-  ru: { translation: ru },
-  fr: { translation: fr },
-};
+// Page copy lives in src/content/<locale>/<section>.json so each section is
+// a separate, editable entry in the CMS panel at /admin. Vite inlines every
+// match at build time; the files are merged back into one flat translation
+// object per locale, exactly the shape i18next had before the split.
+// Adding a new section file needs no change here.
+const contentModules = import.meta.glob("../content/*/*.json", { eager: true });
+
+const resources = {};
+for (const [filePath, mod] of Object.entries(contentModules)) {
+  const locale = filePath.split("/").at(-2);
+  if (!SUPPORTED_LANGUAGES.some((l) => l.code === locale)) continue;
+  resources[locale] ??= { translation: {} };
+  Object.assign(resources[locale].translation, mod.default ?? mod);
+}
 
 // Cloudflare sets this cookie at the edge based on the visitor's country
 // (see /cloudflare/worker.js). If present, it wins over the browser's

@@ -1,0 +1,32 @@
+{
+  "appointment": {
+    "eyebrow": "Réserver un cours",
+    "title": "Commencer les cours",
+    "intro": "Remplissez le formulaire pour votre premier cours. Choisissez ci-dessous une date et un horaire disponibles pour réserver votre place — votre cours se déroulera en direct sur Zoom avec l'un de nos instructeurs.",
+    "steps": {
+      "title": "Comment fonctionne la réservation",
+      "items": [
+        {
+          "title": "1. Choisissez votre style et votre créneau",
+          "text": "Parcourez les dates et horaires disponibles et choisissez le créneau qui correspond à votre emploi du temps."
+        },
+        {
+          "title": "2. Confirmez votre réservation",
+          "text": "Vous recevrez un lien Zoom et les détails du cours par e-mail dès que votre créneau sera confirmé."
+        },
+        {
+          "title": "3. Payez directement avec nous",
+          "text": "Le paiement de votre cours est organisé manuellement avec notre équipe après la réservation — aucun paiement en ligne n'est requis pour le moment."
+        },
+        {
+          "title": "4. Présentez-vous et dansez",
+          "text": "Rejoignez le lien Zoom à l'heure réservée et commencez à bouger."
+        }
+      ]
+    },
+    "widgetTitle": "Dates et horaires disponibles",
+    "widgetPlaceholder": "Notre calendrier de réservation Zoom en direct sera intégré ici. En attendant, choisissez un créneau et nous vous confirmerons par e-mail.",
+    "paymentNote": "Le paiement est actuellement géré manuellement avec notre équipe une fois votre réservation confirmée — aucun paiement n'est collecté sur ce site.",
+    "cta": "Réserver sur Zoom"
+  }
+}

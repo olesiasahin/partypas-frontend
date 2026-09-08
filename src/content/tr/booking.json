@@ -1,0 +1,32 @@
+{
+  "appointment": {
+    "eyebrow": "Ders Ayırt",
+    "title": "Derslerine başla",
+    "intro": "İlk ders için formu doldur. Aşağıdan uygun bir tarih ve saat seçip yerinizi ayırtın — dersiniz eğitmenlerimizden biriyle canlı olarak Zoom üzerinden gerçekleşecek.",
+    "steps": {
+      "title": "Rezervasyon nasıl işliyor",
+      "items": [
+        {
+          "title": "1. Stilinizi ve saatinizi seçin",
+          "text": "Uygun tarih ve saatlere göz atın, programınıza uyan zaman dilimini seçin."
+        },
+        {
+          "title": "2. Rezervasyonunuzu onaylayın",
+          "text": "Randevunuz onaylandığında Zoom bağlantısını ve ders detaylarını e-posta ile alacaksınız."
+        },
+        {
+          "title": "3. Ödemeyi doğrudan bizimle yapın",
+          "text": "Dersinizin ödemesi, rezervasyondan sonra ekibimizle manuel olarak ayarlanır — şimdilik çevrimiçi ödeme gerekmiyor."
+        },
+        {
+          "title": "4. Gelin ve dans edin",
+          "text": "Ayırttığınız saatte Zoom bağlantısına katılın ve hareket etmeye başlayın."
+        }
+      ]
+    },
+    "widgetTitle": "Uygun tarihler ve saatler",
+    "widgetPlaceholder": "Canlı Zoom randevu takvimimiz buraya yerleştirilecek. Bu sırada bir zaman dilimi seçin, size e-posta ile onay verelim.",
+    "paymentNote": "Ödeme şu anda rezervasyonunuz onaylandıktan sonra ekibimizle manuel olarak ayarlanmaktadır — bu web sitesinde ödeme alınmamaktadır.",
+    "cta": "Zoom üzerinden ayırt"
+  }
+}

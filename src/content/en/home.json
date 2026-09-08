@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "title": "A STEP\nTOWARD\nYOURSELF.",
+    "subtitle": "Dance is time\nyou choose\nto give yourself.",
+    "cta": "Start your classes"
+  },
+  "disciplines": {
+    "classical": {
+      "name": "Classical",
+      "lines": [
+        "Posture",
+        "Elegance",
+        "Strength"
+      ],
+      "more": "Learn more"
+    },
+    "ballroom": {
+      "name": "Ballroom Dance",
+      "lines": [
+        "Rhythm",
+        "Confidence",
+        "Femininity"
+      ],
+      "more": "Learn more"
+    },
+    "stretching": {
+      "name": "Stretching",
+      "lines": [
+        "Flexibility",
+        "Ease",
+        "Body awareness"
+      ],
+      "more": "Learn more"
+    }
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "title": "Live online.\nSmall groups\nthat feel personal.",
+    "more": "Discover details",
+    "steps": [
+      "Choose a class",
+      "Choose your time",
+      "Get your link",
+      "Join from home"
+    ]
+  },
+  "teacher": {
+    "eyebrow": "Your teacher",
+    "title": "Dance is\na way of life\nfor me.",
+    "text": "I bring years of stage, studio and teaching experience to help women build confidence, technique and expressive movement.",
+    "more": "More"
+  },
+  "footerCta": {
+    "title": "Start your classes.",
+    "text": "Fill out the form and we’ll choose your first step together.",
+    "button": "Start your classes"
+  }
+}

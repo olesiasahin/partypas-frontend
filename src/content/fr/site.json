@@ -1,0 +1,21 @@
+{
+  "brand": {
+    "name": "PartyPas",
+    "tagline": "Bouge. Souris. Recommence."
+  },
+  "nav": {
+    "home": "Accueil",
+    "classes": "Cours",
+    "programs": "Programmes",
+    "about": "À propos",
+    "how": "Comment ça marche",
+    "blog": "Blog & FAQ",
+    "contact": "Contact",
+    "cta": "Commencer les cours"
+  },
+  "footer": {
+    "tagline": "Bouge. Souris. Recommence.",
+    "rights": "Tous droits réservés.",
+    "languages": "Langue"
+  }
+}

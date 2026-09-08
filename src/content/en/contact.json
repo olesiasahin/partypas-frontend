@@ -1,0 +1,12 @@
+{
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Contact",
+    "text": "Questions? Get in touch. The quickest way to reach us right now is by email — phone and studio address details are coming soon.",
+    "emailLabel": "Email us",
+    "email": "letsdance@partypas.com",
+    "appointmentTitle": "Or skip straight to booking",
+    "appointmentText": "Prefer to just grab a spot? Check our available dates and hours below.",
+    "appointmentCta": "Book a class"
+  }
+}

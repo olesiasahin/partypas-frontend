@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "title": "KENDİNE\nDOĞRU\nBİR ADIM.",
+    "subtitle": "Dans etmek,\nkendine ayırdığın\nen güzel zamandır.",
+    "cta": "Derslerine başla"
+  },
+  "disciplines": {
+    "classical": {
+      "name": "Klasik (Balet)",
+      "lines": [
+        "Duruş",
+        "Zarafet",
+        "Güç"
+      ],
+      "more": "Detaylı bilgi"
+    },
+    "ballroom": {
+      "name": "Salon Dansları",
+      "lines": [
+        "Ritim",
+        "Özgüven",
+        "Feminenlik"
+      ],
+      "more": "Detaylı bilgi"
+    },
+    "stretching": {
+      "name": "Stretching",
+      "lines": [
+        "Esneklik",
+        "Rahatlık",
+        "Beden farkındalığı"
+      ],
+      "more": "Detaylı bilgi"
+    }
+  },
+  "how": {
+    "eyebrow": "Nasıl işliyor?",
+    "title": "Online. Canlı.\nSana özel hissettiren\nküçük gruplar.",
+    "more": "Detayları keşfet",
+    "steps": [
+      "Dersini seç",
+      "Takvimden saatini ayırt",
+      "Bağlantını al",
+      "Evinden derse katıl"
+    ]
+  },
+  "teacher": {
+    "eyebrow": "Öğretmeniniz",
+    "title": "Dans,\nbenim için\nbir yaşam biçimi.",
+    "text": "Yıllar içinde sahnede, stüdyoda ve eğitimde edindiğim tecrübelerle, kadınların dansla güçlenmesine ve kendini ifade etmesine eşlik ediyorum.",
+    "more": "Daha fazla"
+  },
+  "footerCta": {
+    "title": "Derslerine başla.",
+    "text": "Formu doldur ve sana uygun ilk adımı birlikte seçelim.",
+    "button": "Derslerine başla"
+  }
+}

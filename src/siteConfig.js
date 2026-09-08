@@ -1,30 +1,16 @@
 // Site-wide, non-translated settings — the React counterpart of the
-// prototype's `settings` block in content.js. Edit here first.
+// prototype's `settings` block in content.js.
 //
-// Contact — values copied verbatim from the prototype's content.js
-// (settings.contact) so the footer and Contact page match it exactly.
-// The phone / Instagram / WhatsApp values are the prototype's placeholders:
-// replace them with the real ones here (one place) whenever ready; setting
-// one to "" hides that line/card.
-export const CONTACT = {
-  phone: "+90 534 123 45 67",
-  instagram: "@partypas.dance",
-  instagramUrl: "https://instagram.com",
-  email: "info@partypas.com",
-  whatsapp: "https://wa.me/905341234567",
-};
+// The values now live in src/content/settings.json so they can be edited
+// from the CMS panel at /admin ("Site settings"). This module keeps the
+// same named exports, so nothing that imports it had to change.
+//
+// Contact: setting a value to "" hides that line/card in the footer and on
+// the Contact page.
+import settings from "./content/settings.json";
 
-export const IMAGES = {
-  hero: "/images/hero.jpg",
-  classical: "/images/classical.jpg",
-  ballroom: "/images/ballroom.jpg",
-  stretching: "/images/stretching.jpg",
-  editorial: "/images/editorial.jpg",
-  online: "/images/online.jpg",
-  teacher: "/images/teacher.jpg",
-};
+export const CONTACT = settings.contact;
+export const IMAGES = settings.images;
+export const LOGOS = settings.logos;
 
-export const LOGOS = {
-  dark: "/logo-gold.png", // on the burgundy header/footer
-  light: "/logo-burgundy.png", // watermark seals over photography
-};
+export default settings;

@@ -1,0 +1,48 @@
+{
+  "blog": {
+    "eyebrow": "Blog & SSS",
+    "title": "Hikayeler, ipuçları & cevaplar",
+    "intro": "Dans ipuçları, stüdyo haberleri ve en çok duyduğumuz sorular.",
+    "readMore": "Devamını oku",
+    "faqTitle": "Sıkça sorulan sorular",
+    "posts": [
+      {
+        "title": "İlk Salon Dansı dersiniz için 5 ipucu",
+        "excerpt": "Salon danslarına yeni mi başlıyorsunuz? İşte bunalmadan, kendinden emin bir şekilde derse başlamanın yolu.",
+        "body": ""
+      },
+      {
+        "title": "Stretching neden her dansçının haftasında olmalı",
+        "excerpt": "Esneklik ve beden farkındalığı bir ekstra değil — her stili daha kolay hissettiren şey.",
+        "body": ""
+      },
+      {
+        "title": "Klasik temelleri: güçlü bir duruş gerçekte neyi çalıştırır",
+        "excerpt": "Her dansçının öğrendiği ilk şey, düşündüğünüzden çok daha fazlasını içerir.",
+        "body": ""
+      }
+    ],
+    "faq": [
+      {
+        "q": "Katılmak için partnere ihtiyacım var mı?",
+        "a": "Hiç de değil. Derslerimizin çoğu tek başına öğrenenler için tasarlanmıştır ve partner çalışmaları ders sırasında eğitmenler veya diğer öğrencilerle pratik edilir."
+      },
+      {
+        "q": "Zoom dersi için neye ihtiyacım var?",
+        "a": "Kameralı bir dizüstü bilgisayar, tablet veya telefon, stabil bir internet bağlantısı ve evde biraz açık zemin alanı."
+      },
+      {
+        "q": "Bir ders için ödemeyi nasıl yapıyorum?",
+        "a": "Bir zaman dilimi ayırttıktan sonra ekibimiz ödemeyi manuel olarak ayarlamak için sizinle iletişime geçecek — şu an için web sitesinde ödeme işlemi yapmıyoruz."
+      },
+      {
+        "q": "Dersler arasında geçiş yapabilir miyim?",
+        "a": "Kesinlikle — birçok öğrencimiz iyi yuvarlaklaşmış bir beceri seti oluşturmak için Klasik, Salon Dansları ve Stretching'i bir arada keşfediyor."
+      },
+      {
+        "q": "Ya randevumu değiştirmem gerekirse?",
+        "a": "letsdance@partypas.com adresinden bize e-posta gönderin, size yeni bir zaman dilimi bulmamıza yardımcı olalım."
+      }
+    ]
+  }
+}

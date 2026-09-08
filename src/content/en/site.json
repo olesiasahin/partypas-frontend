@@ -1,0 +1,21 @@
+{
+  "brand": {
+    "name": "PartyPas",
+    "tagline": "Move. Smile. Repeat."
+  },
+  "nav": {
+    "home": "Home",
+    "classes": "Classes",
+    "programs": "Programs",
+    "about": "About",
+    "how": "How it works",
+    "blog": "Blog & FAQ",
+    "contact": "Contact",
+    "cta": "Start your classes"
+  },
+  "footer": {
+    "tagline": "Move. Smile. Repeat.",
+    "rights": "All rights reserved.",
+    "languages": "Language"
+  }
+}
