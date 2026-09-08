@@ -233,19 +233,20 @@ collections:
         i18n: true
         fields:
           - name: contact
-            label: Contact
+            label: Contact channel labels
             widget: object
             i18n: true
             fields:
-              - { name: eyebrow, label: Eyebrow, widget: string, i18n: true }
-              - { name: title, label: Title, widget: string, i18n: true }
-              - { name: text, label: Text, widget: text, i18n: true }
-              - { name: emailLabel, label: E-mail label, widget: string, i18n: true }
-              - { name: email, label: E-mail address, widget: string, i18n: duplicate }
-              - { name: appointmentTitle, label: Booking block title, widget: string, i18n: true }
-              - { name: appointmentText, label: Booking block text, widget: text, i18n: true }
-              - { name: appointmentCta, label: Booking button, widget: string, i18n: true }
-
+              - name: labels
+                label: Card headings
+                widget: object
+                i18n: true
+                fields:
+                  - { name: instagram, label: Instagram heading, widget: string, i18n: true }
+                  - { name: phone, label: Phone heading, widget: string, i18n: true }
+                  - { name: email, label: E-mail heading, widget: string, i18n: true }
+                  - { name: whatsapp, label: WhatsApp heading, widget: string, i18n: true }
+              - { name: whatsappCta, label: WhatsApp link text, widget: string, i18n: true, hint: 'The clickable line under the WhatsApp heading, e.g. “Send a message”.' }
       - name: blog
         label: Blog & FAQ
         file: src/content/{{locale}}/blog.json

@@ -60,7 +60,7 @@ leaving the page.
 | **Inner pages** | Title / intro / body for Classical, Ballroom, Stretching, Why online, About, Programs, Contact, Start your classes |
 | **Programs & prices** | The program cards — add, remove, reorder, reprice |
 | **Booking page** | Booking steps, calendar heading, payment note |
-| **Contact page** | Contact wording and the e-mail address |
+| **Contact page** | Headings of the four contact cards, and the WhatsApp link text |
 | **Blog & FAQ** | Blog posts and FAQ questions — add, remove, reorder |
 
 **Line breaks.** Headlines like the hero use hard line breaks for their rhythm.
@@ -77,6 +77,9 @@ Not translated — one value used in all five languages.
 
 - **Contact details** — e-mail, phone, WhatsApp link, Instagram. Clearing a
   field hides that block on the Contact page and in the footer entirely.
+  Phone and WhatsApp are separate cards: the phone card dials the number,
+  the WhatsApp card opens the chat. Their *headings* are translated text
+  (Website texts → Contact page); the values themselves live here.
 - **Photos** — the seven site photos. Upload a new one and it replaces the old
   one everywhere it's used. Use similar proportions to the file you're
   replacing; the layout crops to fixed heights.

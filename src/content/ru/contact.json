@@ -1,12 +1,11 @@
 {
   "contact": {
-    "eyebrow": "Контакты",
-    "title": "Контакты",
-    "text": "Есть вопросы? Напиши нам. Быстрее всего связаться с нами сейчас по электронной почте — номер телефона и адрес студии появятся позже.",
-    "emailLabel": "Напишите нам",
-    "email": "letsdance@partypas.com",
-    "appointmentTitle": "Или сразу перейти к записи",
-    "appointmentText": "Хотите просто забронировать место? Посмотрите доступные даты и время ниже.",
-    "appointmentCta": "Записаться на урок"
+    "labels": {
+      "instagram": "Instagram",
+      "phone": "Телефон",
+      "email": "E-mail",
+      "whatsapp": "WhatsApp"
+    },
+    "whatsappCta": "Напишите нам"
   }
 }

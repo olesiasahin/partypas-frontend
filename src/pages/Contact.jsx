@@ -3,8 +3,13 @@ import InnerPage from "../components/InnerPage";
 import { CONTACT, IMAGES } from "../siteConfig";
 
 // Mirrors the prototype's contact page: inner hero + a 2-column grid of
-// contact channels. Channels render only when set in siteConfig.js — per
-// the PartyPas spec only the email is public for now.
+// contact channels. Channels render only when set in Site settings
+// (src/content/settings.json) — clearing a value hides its card.
+//
+// The prototype labelled the phone card "WhatsApp" and the WhatsApp card
+// "PartyPas", which read as the same channel twice. Phone and WhatsApp are
+// now labelled for what they actually are; the labels themselves are
+// translated (Website texts → Contact page).
 export default function Contact() {
   const { t } = useTranslation();
   const page = t("pages.contact", { returnObjects: true });
@@ -16,7 +21,7 @@ export default function Contact() {
         <div className="contact-grid">
           {c.instagram && (
             <div>
-              <h2>Instagram</h2>
+              <h2>{t("contact.labels.instagram")}</h2>
               <p>
                 <a href={c.instagramUrl || "https://instagram.com"} target="_blank" rel="noreferrer">
                   {c.instagram}
@@ -26,23 +31,23 @@ export default function Contact() {
           )}
           {c.phone && (
             <div>
-              <h2>WhatsApp</h2>
+              <h2>{t("contact.labels.phone")}</h2>
               <p>
                 <a href={`tel:${c.phone.replace(/\s/g, "")}`}>{c.phone}</a>
               </p>
             </div>
           )}
           <div>
-            <h2>E-mail</h2>
+            <h2>{t("contact.labels.email")}</h2>
             <p>
               <a href={`mailto:${c.email}`}>{c.email}</a>
             </p>
           </div>
           {c.whatsapp && (
             <div>
-              <h2>PartyPas</h2>
+              <h2>{t("contact.labels.whatsapp")}</h2>
               <a className="text-link" href={c.whatsapp} target="_blank" rel="noreferrer">
-                WhatsApp →
+                {t("contact.whatsappCta")} →
               </a>
             </div>
           )}
