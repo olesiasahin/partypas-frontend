@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 
 // URL scheme identical to the design prototype: ?page=<key>&lang=<xx>[#hash]
 // so any prototype URL pasted onto the site shows the same page.
-export const PAGES = ["home", "klasik", "salon", "stretching", "neden-online", "programlar", "hakkimda", "iletisim", "trial", "blog"];
+export const PAGES = ["home", "klasik", "salon", "stretching", "neden-online", "programlar", "programlar-online", "programlar-studio", "hakkimda", "iletisim", "trial", "blog"];
 
 // i18n code -> prototype lang code
 export const LANG_OUT = { uk: "ua" };

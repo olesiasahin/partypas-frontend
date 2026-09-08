@@ -20,5 +20,33 @@
       "details": "1 cours",
       "price": "2 500 TL"
     }
-  ]
+  ],
+  "programBranches": {
+    "online": {
+      "eyebrow": "Des cours où que vous soyez",
+      "title": "Online",
+      "lead": "Des cours en direct en petit groupe avec une attention individuelle.",
+      "body": "Entraînez-vous chez vous ou en voyage sans compromis sur la qualité. La professeure vous voit en direct, explique les détails et corrige votre technique. Un peu d’espace et une connexion stable suffisent.",
+      "linkLabel": "Découvrir les programmes online",
+      "programs": [
+        { "name": "Classique + Stretching", "details": "8 cours par mois", "description": "Posture, lignes élégantes et souplesse en toute sécurité dans un programme équilibré.", "price": "8 000 TL" },
+        { "name": "Danses de salon + Stretching", "details": "8 cours par mois", "description": "Rythme, coordination et fluidité, sans partenaire nécessaire.", "price": "8 000 TL" },
+        { "name": "The Full Experience", "details": "Classique + Danses de salon + Stretching", "description": "Un programme complet pour la technique, la musicalité, la force et la souplesse.", "price": "10 000 TL / mois" },
+        { "name": "Cours online privé", "details": "Cours individuel", "description": "Le contenu et le rythme sont adaptés à vos objectifs et à votre niveau.", "price": "2 500 TL" }
+      ]
+    },
+    "studio": {
+      "eyebrow": "Cours en présentiel",
+      "title": "Studio",
+      "lead": "Des cours en personne avec des corrections précises et l’atmosphère d’un studio de danse.",
+      "body": "Au studio, la professeure travaille plus précisément l’alignement, la qualité du mouvement et les détails techniques. Idéal pour approfondir sa pratique, préparer une chorégraphie ou profiter d’un accompagnement en face à face.",
+      "linkLabel": "Découvrir les programmes studio",
+      "programs": [
+        { "name": "Danse classique", "details": "Au studio", "description": "Technique, posture, coordination et expression avec des corrections personnalisées." },
+        { "name": "Danses de salon", "details": "Au studio", "description": "Travail du pas, du rythme, de la fluidité et de la confiance. Sans partenaire." },
+        { "name": "Stretching", "details": "Au studio", "description": "Souplesse, mobilité et contrôle du corps en toute sécurité selon vos besoins." },
+        { "name": "Programme personnel", "details": "Format individuel", "description": "Objectifs, calendrier et contenu sont conçus spécialement pour vous." }
+      ]
+    }
+  }
 }

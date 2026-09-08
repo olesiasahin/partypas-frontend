@@ -20,5 +20,33 @@
       "details": "Özel ders",
       "price": "2.500 TL"
     }
-  ]
+  ],
+  "programBranches": {
+    "online": {
+      "eyebrow": "Her yerden canlı ders",
+      "title": "Online",
+      "lead": "Öğretmenin her katılımcıyla ilgilendiği küçük gruplarda canlı dersler.",
+      "body": "Kaliteden ödün vermeden evden veya seyahatteyken çalış. Öğretmenin seni gerçek zamanlı görür, ayrıntıları açıklar ve tekniğini düzeltir. Biraz boş alan ve güvenilir internet yeterlidir.",
+      "linkLabel": "Online programları keşfet",
+      "programs": [
+        { "name": "Klasik + Stretching", "details": "Ayda 8 ders", "description": "Duruş, zarif çizgiler ve güvenli esneklik çalışmasını birleştiren dengeli program.", "price": "8.000 TL" },
+        { "name": "Salon Dansları + Stretching", "details": "Ayda 8 ders", "description": "Partner gerektirmeden ritim, koordinasyon ve akıcı hareket.", "price": "8.000 TL" },
+        { "name": "The Full Experience", "details": "Klasik + Salon Dansları + Stretching", "description": "Teknik, müzikalite, güç ve esneklik için kapsamlı program.", "price": "10.000 TL / ay" },
+        { "name": "Bireysel Online Ders", "details": "Bire bir ders", "description": "İçerik ve tempo tamamen hedeflerine ve seviyene göre uyarlanır.", "price": "2.500 TL" }
+      ]
+    },
+    "studio": {
+      "eyebrow": "Stüdyoda yüz yüze",
+      "title": "Studio",
+      "lead": "Kişisel geri bildirim ve dans stüdyosu atmosferiyle yüz yüze eğitim.",
+      "body": "Stüdyoda öğretmen beden hizası, hareket kalitesi ve teknik ayrıntılarla daha yakından çalışabilir. Derinleşmek, özel bir koreografi hazırlamak veya yüz yüze yönlendirme isteyenler için idealdir.",
+      "linkLabel": "Studio programlarını keşfet",
+      "programs": [
+        { "name": "Klasik Dans", "details": "Stüdyoda", "description": "Kişisel düzeltmelerle teknik, duruş, koordinasyon ve ifade." },
+        { "name": "Salon Dansları", "details": "Stüdyoda", "description": "Adım, ritim, akıcılık ve özgüven. Partner gerekmez." },
+        { "name": "Stretching", "details": "Stüdyoda", "description": "İhtiyaçlarına göre güvenli esneklik, mobilite ve beden kontrolü." },
+        { "name": "Kişisel Program", "details": "Bire bir format", "description": "Hedefler, program ve ders içeriği sana özel hazırlanır." }
+      ]
+    }
+  }
 }

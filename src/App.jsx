@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import ClassPage from "./pages/ClassPage";
 import WhyOnline from "./pages/WhyOnline";
 import Programs from "./pages/Programs";
+import ProgramBranch from "./pages/ProgramBranch";
 import About from "./pages/About";
 import Appointment from "./pages/Appointment";
 import Contact from "./pages/Contact";
@@ -20,6 +21,8 @@ const PAGES = {
   stretching: <ClassPage discKey="stretching" image={IMAGES.stretching} />,
   "neden-online": <WhyOnline />,
   programlar: <Programs />,
+  "programlar-online": <ProgramBranch branchKey="online" />,
+  "programlar-studio": <ProgramBranch branchKey="studio" />,
   hakkimda: <About />,
   iletisim: <Contact />,
   trial: <Appointment />,
@@ -39,6 +42,8 @@ const ALIASES = {
   "/stretching": "stretching",
   "/why-online": "neden-online",
   "/programs": "programlar",
+  "/programs/online": "programlar-online",
+  "/programs/studio": "programlar-studio",
   "/about": "hakkimda",
   "/contact": "iletisim",
   "/book": "trial",
